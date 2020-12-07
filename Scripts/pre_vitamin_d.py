@@ -18,12 +18,16 @@ def format_number(number):
     return number_str
 
 dir_vitamin_d="../PreVitamin_D/"
+dir_results="../Data/Rosario_period/"
 day_i=datetime.date(2019,6,1)
 day_f=datetime.date(2020,5,31)
 n_days=(day_f-day_i).days+1
-vitamin_max_list=[]
 files=np.sort(listdir(dir_vitamin_d))
+file_result=open(dir_results+"sza_vitamin_max.csv","w")
+file_result.write("Day,SZA,Pre vitamin\n")
 for file in files:
     sza_list,vitamin_list=np.loadtxt(dir_vitamin_d+file,usecols=[1,2],delimiter=",",unpack=True)
     vitamin_max=np.max(vitamin_list)
-    vitamin_max_list=np.append(vitamin_max_list,np.max(vitamin_max))
+    sza_max=np.max(sza_list[vitamin_max==vitamin_list])
+    file_result.write(file[0:6]+","+str(sza_max)+","+str(vitamin_max)+"\n")
+file_result.close()
