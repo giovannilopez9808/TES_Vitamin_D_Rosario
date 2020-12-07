@@ -1,7 +1,5 @@
 import matplotlib.pyplot as plt
-from os import listdir
 import numpy as np
-import datetime
 dir_vitamin_d="../Data/Rosario_period/"
 dir_graphics="../Graphics/"
 day_i=datetime.date(2019,6,1)
