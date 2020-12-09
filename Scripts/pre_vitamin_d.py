@@ -26,7 +26,7 @@ files=np.sort(listdir(dir_vitamin_d))
 file_result=open(dir_results+"sza_vitamin_max.csv","w")
 file_result.write("Day,SZA,Pre vitamin\n")
 for file in files:
-    sza_list,vitamin_list=np.loadtxt(dir_vitamin_d+file,usecols=[1,2],delimiter=",",unpack=True)
+    sza_list,vitamin_list=np.loadtxt(dir_vitamin_d+file,usecols=[1,3],delimiter=",",unpack=True,skiprows=1)
     vitamin_max=np.max(vitamin_list)
     sza_max=np.max(sza_list[vitamin_max==vitamin_list])
     file_result.write(file[0:6]+","+str(sza_max)+","+str(vitamin_max)+"\n")
