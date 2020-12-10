@@ -1,5 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
+import datetime
+meses=["jun","jul","agt","sept","oct","nov","dic","en","feb","mzo","abr","my","jun"]
 dir_vitamin_d="../Data/Rosario_period/"
 dir_graphics="../Graphics/"
 day_i=datetime.date(2019,6,1)
@@ -7,12 +9,18 @@ day_f=datetime.date(2020,5,31)
 n_days=(day_f-day_i).days+1
 date=np.loadtxt(dir_vitamin_d+"sza_vitamin_max.csv",delimiter=",",skiprows=1,usecols=0,dtype=str)
 data_vitamin=np.loadtxt(dir_vitamin_d+"sza_vitamin_max.csv",delimiter=",",skiprows=1,usecols=2)
-x=np.arange(0,n_days,25);x=np.append(x,n_days)
-plt.scatter(np.arange(n_days),data_vitamin,color="#6a040f")
+data_CIE,data_Herman=np.loadtxt(dir_vitamin_d+"CIE_Herman_data.csv",delimiter=",",skiprows=1,unpack=True)
+x=np.arange(n_days)
+plt.scatter(x,data_vitamin,c="#f72585",label="Modelo TUV",marker=".")
+plt.scatter(x,data_Herman,c="#3a0ca3",label="Herman, 2010",marker=".")
+plt.scatter(x[data_CIE!=0],data_CIE[data_CIE!=0],c="#4cc9f0",label="CIE-2014",marker=".")
+plt.ylabel("Pre-vitamina D (W/m$^2$)",fontsize=12)
 plt.xlim(0,n_days)
 plt.ylim(0,1)
-plt.xticks(x,date[x-1],rotation=60)
-plt.yticks(np.arange(0,1+0.1,0.1))
+plt.xticks(np.linspace(0,n_days,13),meses,fontsize=12)
+plt.yticks(np.arange(0,1+0.1,0.1),fontsize=12)
 plt.grid(ls="--",color="grey",alpha=0.3)
-plt.subplots_adjust(left=0.114,bottom=0.171,right=0.945,top=0.94)
+plt.legend(frameon=False,ncol=3,markerscale=2)
+plt.subplots_adjust(left=0.117,bottom=0.138,right=0.93,top=0.957)
 plt.savefig(dir_graphics+"Previtamin_D.png",dpi=300)
+plt.show()
