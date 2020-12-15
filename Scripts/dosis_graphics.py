@@ -15,7 +15,7 @@ def plot_data(im,div,meses,days,title,color):
     plt.ylabel("TES (min)",fontsize=12)
     plt.grid(ls="--",color="grey",alpha=0.5)
 
-meses=["jun","jul","agt","sept","oct","nov","dic","en","feb","mzo","abr","my","jun"]
+meses=["jun","jul","agto","sept","oct","nov","dic","en","feb","mar","abr","may","jun"]
 dir_data="../Data/Rosario_period/"
 dir_graphics="../Graphics/"
 dates,time_vitamin,time_med=np.loadtxt(dir_data+"dosis_time.csv",delimiter=",",unpack=True,skiprows=1)
