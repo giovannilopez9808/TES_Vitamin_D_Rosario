@@ -12,7 +12,8 @@ def plot_data(im,div,meses,days,title,color):
     plt.xlim(0,days)
     plt.ylim(0,lim)
     plt.xticks(np.linspace(0,days,13),meses,fontsize=11)
-    plt.ylabel("TES (min)",fontsize=12)
+    plt.ylabel("TES (minutos)",fontsize=12)
+    plt.xlabel("Año 2019-2020",fontsize=12)
     plt.grid(ls="--",color="grey",alpha=0.5)
 
 meses=["jun","jul","agto","sept","oct","nov","dic","en","feb","mar","abr","may","jun"]
@@ -23,10 +24,10 @@ days=366
 title="Dosis pre-vitamina D 136 J/m$^2$";color="#E7CA01"
 plt.plot(np.arange(days),time_vitamin,color=color,label=title,lw=1.5)
 plt.fill_between(np.arange(days),time_vitamin,time_med,color="#E7CA01",alpha=0.5)
-lim,div=90,10;title="Dosis eritémica mínima 250 J/m$^2$";color="#fb8500"
+lim,div=90,10;title="Dosis eritémica mínima 250 J/m$^2$";color="#CE0000"
 plt.plot(np.arange(days),time_med,color=color,label=title,lw=1.5)
 plot_data(lim,div,meses,days,title,color)
 plt.subplots_adjust(left=0.12,bottom=0.11,right=0.952,top=0.912,hspace=0.248)
-plt.legend(frameon=False,fontsize=10)
+#plt.legend(frameon=False,fontsize=10)
 plt.savefig(dir_graphics+"dosis_vitamin.png",dpi=300)
 plt.show()
