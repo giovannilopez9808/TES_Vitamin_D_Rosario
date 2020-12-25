@@ -1,4 +1,4 @@
-      PROGRAM tuv
+      program tuv
 *-----------------------------------------------------------------------------*
 *=    Tropospheric Ultraviolet-Visible (TUV) radiation model                 =*
 *=    Version 5.3                                                            =*
@@ -40,35 +40,35 @@
 
 * Wavelength grid:
 
-      INTEGER nw, iw, nwint
-      REAL wl(kw), wc(kw), wu(kw)
-      REAL wstart, wstop
+      integer nw,iw,nwint
+      REAL wl(kw),wc(kw),wu(kw)
+      REAL wstart,wstop
 
 * Altitude grid
 
-      INTEGER nz, nzm1, iz, izout
-      REAL z(kz), zstart, zstop, zout
+      integer nz,nzm1,iz,izout
+      REAL z(kz),zstart,zstop,zout
 
 * Solar zenith angle and azimuth
 * slant pathlengths in spherical geometry
 
-      REAL sza(kt), zen
-      INTEGER nid(0:kz)
+      REAL sza(kt),zen
+      integer nid(0:kz)
       REAL dsdh(0:kz,kz)
 
 * Extra terrestrial solar flux and earth-Sun distance ^-2
 
-      REAL f(kw), etf(kw)
+      REAL f(kw),etf(kw)
       REAL esfact(kt)
 
 * Ozone absorption cross section
 
-      INTEGER mabs
+      integer mabs
       REAL o3xs(kz,kw)
 
 * O2 absorption cross section
 
-      REAL o2xs(kz,kw), o2xs1(kw)
+      REAL o2xs(kz,kw),o2xs1(kw)
 
 * SO2 absorption cross section
      
@@ -80,38 +80,38 @@
 
 * Atmospheric optical parameters
 
-      REAL tlev(kz), tlay(kz)
-      REAL aircon(kz), aircol(kz), vcol(kz), scol(kz)
+      REAL tlev(kz),tlay(kz)
+      REAL aircon(kz),aircol(kz),vcol(kz),scol(kz)
       REAL dtrl(kz,kw)
       REAL co3(kz)
-      REAL dto3(kz,kw), dto2(kz,kw), dtso2(kz,kw), dtno2(kz,kw)
-      REAL dtcld(kz,kw), omcld(kz,kw), gcld(kz,kw)
-      REAL dtaer(kz,kw), omaer(kz,kw), gaer(kz,kw)
-      REAL dtsnw(kz,kw), omsnw(kz,kw), gsnw(kz,kw)
+      REAL dto3(kz,kw),dto2(kz,kw),dtso2(kz,kw),dtno2(kz,kw)
+      REAL dtcld(kz,kw),omcld(kz,kw),gcld(kz,kw)
+      REAL dtaer(kz,kw),omaer(kz,kw),gaer(kz,kw)
+      REAL dtsnw(kz,kw),omsnw(kz,kw),gsnw(kz,kw)
       REAL albedo(kw)
-      REAL dt_any(kz,kw), om_any(kz,kw), g_any(kz,kw)
+      REAL dt_any(kz,kw),om_any(kz,kw),g_any(kz,kw)
 
 * Spectral irradiance and actinic flux (scalar irradiance)
 
-      REAL edir(kz), edn(kz), eup(kz)
+      REAL edir(kz),edn(kz),eup(kz)
       REAL sirrad(kz,kw)
-      REAL fdir(kz), fdn(kz), fup(kz)
+      REAL fdir(kz),fdn(kz),fup(kz)
       REAL saflux(kz,kw)
 
 * Spectral weighting functions and weighted radiation
 
-      INTEGER ns, is
-      REAL sw(ks,kw), rate(ks,kz), dose(ks)
+      integer ns,is
+      REAL sw(ks,kw),rate(ks,kz),dose(ks)
       REAL drdw
       CHARACTER*50 slabel(ks)
 
 * Photolysis coefficients (j-values)
 
-      INTEGER nj, ij
-      REAL sj(kj,kz,kw), valj(kj,kz)
+      integer nj,ij
+      REAL sj(kj,kz,kw),valj(kj,kz)
       REAL djdw
       CHARACTER*50 jlabel(kj)
-      INTEGER tpflag(kj)
+      integer tpflag(kj)
 
 **** Re-scaling factors (can be read from input file)
 * New surface albedo and surface pressure (milli bar)
@@ -119,56 +119,56 @@
 * Cloud optical depth, altitude of base and top
 * Aerosol optical depth at 550 nm, single scattering albedo, Angstrom alpha
 
-      REAL alsurf, psurf
-      REAL o3_tc, so2_tc, no2_tc
-      REAL taucld, zbase, ztop
-      REAL tauaer, ssaaer, alpha
+      REAL alsurf,psurf
+      REAL o3_tc,so2_tc,no2_tc
+      REAL taucld,zbase,ztop
+      REAL tauaer,ssaaer,alpha
 
 * Location: Lat and Lon (deg.), surface elev (km)
 * Altitude, temperature and pressure for specific outputs
 
-      REAL lat, lon
-      REAL zaird, ztemp
+      REAL lat,lon
+      REAL zaird,ztemp
 
 * Time and/or solar zenith angle
       
-      INTEGER iyear, imonth, iday
-      INTEGER it, nt
-      REAL t(kt), tstart, tstop
+      integer iyear,imonth,iday
+      integer it,nt
+      REAL t(kt),tstart,tstop
       REAL tmzone
       LOGICAL lzenit
 
 * number of radiation streams
 
-      INTEGER nstr
+      integer nstr
 
 * input/output control
 
       LOGICAL intrct
-      CHARACTER*6 inpfil, outfil
+      CHARACTER*6 inpfil,outfil
 
-      INTEGER iout
+      integer iout
 
-      REAL dirsun, difdn, difup
+      REAL dirsun,difdn,difup
 
       CHARACTER*1 again
 
 * Save arrays for output:
 
-      LOGICAL lirrad, laflux, lrates, ljvals, lmmech
-      INTEGER isfix, ijfix, itfix, izfix, iwfix
-      INTEGER nms, ims(ks), nmj, imj(kj)
+      LOGICAL lirrad,laflux,lrates,ljvals,lmmech
+      integer isfix,ijfix,itfix,izfix,iwfix
+      integer nms,ims(ks),nmj,imj(kj)
 
-      REAL svj_zj(kz,kj), svj_tj(kt,kj), svj_zt(kz,kt)
-      REAL svr_zs(kz,ks), svr_ts(kt,ks), svr_zt(kz,kt)
-      REAL svf_zw(kz,kw), svf_tw(kt,kw), svf_zt(kz,kt)
-      REAL svi_zw(kz,kw), svi_tw(kt,kw), svi_zt(kz,kt)
+      REAL svj_zj(kz,kj),svj_tj(kt,kj),svj_zt(kz,kt)
+      REAL svr_zs(kz,ks),svr_ts(kt,ks),svr_zt(kz,kt)
+      REAL svf_zw(kz,kw),svf_tw(kt,kw),svf_zt(kz,kt)
+      REAL svi_zw(kz,kw),svi_tw(kt,kw),svi_zt(kz,kt)
 
 * Planetary boundary layer height and pollutant concentrations
 
-      INTEGER ipbl
+      integer ipbl
       REAL zpbl
-      REAL o3pbl, so2pbl, no2pbl, aod330
+      REAL o3pbl,so2pbl,no2pbl,aod330
 
 * WRF-Chem output control
 
@@ -179,7 +179,7 @@
 *          in lakes and ocean
 *   h2oabs = sdom at specific wavenght
 
-      INTEGER jdom, jd
+      integer jdom,jd
       CHARACTER*50 dlabel(kdom)
       REAL sdom(kdom,kw)
       REAL h2oabs
@@ -197,8 +197,8 @@
 *     we_int = from 0 to ydepth
 
       REAL ydepth
-      REAL se_0, de_0, se_y, de_y, se_int, de_int
-      REAL we_0, we_int
+      REAL se_0,de_0,se_y,de_y,se_int,de_int
+      REAL we_0,we_int
 
 *  in-water dose rates, doses - DNA weighted unless otherwise specified
 *     dose in air just above surface, computed by time integration of rate(13,1)
@@ -206,14 +206,14 @@
 *     wratei, wdosei = dose rate, dose, integrated from surface to ydepth
 
       REAL adose
-      REAL wratei, wrate0
-      REAL wdosei, wdose0
+      REAL wratei,wrate0
+      REAL wdosei,wdose0
 
 ****** Other user-defined variables here:
 
 * spectrum locator indices:
 
-      integer js_dna, js_uvi, jd_dom
+      integer js_dna,js_uvi,jd_dom
       integer id
       
 ! Agregado por Giovanni Gamaliel L�pez Padilla
@@ -232,16 +232,12 @@ c      OPEN(UNIT=kout,FILE='tuvlog',STATUS='UNKNOWN')
 * ___ SECTION 1: SIMPLE INPUT VARIABLES --------------------------------
 ******* Read simple input variables from a file:
       inpfil="RARG"
-      CALL rdinp(intrct, 
-     $     inpfil, outfil, nstr,   lat,    lon,    tmzone,
-     $     iyear,  imonth, iday,   zstart, zstop,  nz,
-     $     wstart, wstop,  nwint,  tstart, tstop,  nt,
-     $     lzenit, alsurf, psurf,  o3_tc,  so2_tc, no2_tc,
-     $     taucld, zbase,  ztop,   tauaer, ssaaer, alpha,
-     $     dirsun, difdn,  difup,  zout,   zaird,  ztemp,
-     $     lirrad, laflux, lmmech, lrates, isfix,  nms,
-     $     ljvals, ijfix,  nmj,    iwfix,  itfix,  izfix,
-     $     ims,    slabel, imj,    jlabel)
+      CALL rdinp(intrct,inpfil,outfil,nstr,lat,lon,tmzone,iyear,imonth,
+     $   iday,zstart,zstop,nz,wstart,wstop,nwint,tstart,tstop,nt,lzenit,
+     $   alsurf,psurf,o3_tc,so2_tc,no2_tc,taucld,zbase,ztop,tauaer,
+     $   ssaaer,alpha,dirsun,difdn,difup,zout,zaird,ztemp,lirrad,laflux,
+     $   lmmech,lrates,isfix,nms,ljvals,ijfix,nmj,iwfix,itfix,izfix,ims,
+     $   slabel,imj,jlabel)
 
 
       IF(outfil .EQ. 'screen') THEN
@@ -264,36 +260,32 @@ c      OPEN(UNIT=kout,FILE='tuvlog',STATUS='UNKNOWN')
 
 * altitudes (creates altitude grid, locates index for selected output, izout)
 
-      CALL gridz(zstart, zstop, nz, z, zout, izout)
+      CALL gridz(zstart,zstop,nz,z,zout,izout)
       IF(izfix .GT. 0) izout = izfix
 
 * time/zenith (creates time/zenith angle grid, starting at tstart)
 
-      CALL gridt(lat, lon, tmzone,
-     $     iyear, imonth, iday,
-     $     lzenit, tstart, tstop,
-     $     nt, t, sza, esfact)
+      CALL gridt(lat,lon,tmzone,iyear,imonth,iday,lzenit,tstart,tstop,
+     $   nt,t,sza,esfact)
 
 * wavelength grid, user-set range and spacing. 
 * NOTE:  Wavelengths are in vacuum, and therefore independent of altitude.
 * To use wavelengths in air, see options in subroutine gridw
 
-      CALL gridw(wstart, wstop, nwint,
-     $     nw, wl, wc, wu)
+      CALL gridw(wstart,wstop,nwint,nw,wl,wc,wu)
 
 * ___ SECTION 3: SET UP VERTICAL PROFILES OF TEMPERATURE, AIR DENSITY, and OZONE
 
 ***** Temperature vertical profile, Kelvin 
 *   can overwrite temperature at altitude z(izout)
 
-      CALL vptmp(nz,z, tlev,tlay)
+      CALL vptmp(nz,z,tlev,tlay)
       IF(ztemp .GT. nzero) tlev(izout) = ztemp
 
 *****  Air density (molec cm-3) vertical profile 
 *   can overwrite air density at altitude z(izout)
 
-      CALL vpair(psurf, nz, z,
-     $     aircon, aircol)
+      CALL vpair(psurf,nz,z,aircon,aircol)
       IF(zaird .GT. nzero) aircon(izout) = zaird
 
 *****
@@ -310,19 +302,19 @@ c      OPEN(UNIT=kout,FILE='tuvlog',STATUS='UNKNOWN')
 * Turning on pbl will affect subroutines:
 * vpo3, setno2, setso2, and setaer. See there for details
 
-      zpbl = -999.
+      zpbl =-999.
 C      zpbl = 3.
 
 * locate z-index for top of pbl
 
       ipbl = 0
       IF(zpbl. GT. 0.) THEN
-         DO iz = 1, nz-1
-            IF(z(iz+1) .GT. z(1) + zpbl*1.00001) GO TO 19
+         DO iz = 1,nz-1
+            IF(z(iz+1) .GT. z(1)+zpbl*1.00001) GO TO 19
          ENDDO
  19      CONTINUE
-         ipbl = iz - 1
-         write(*,*) 'top of PBL index, height (km) ', ipbl, z(ipbl)
+         ipbl = iz-1
+         write(*,*) 'top of PBL index,height (km) ',ipbl,z(ipbl)
 
 * specify pbl concetrations, in parts per billion
 
@@ -339,14 +331,13 @@ C      zpbl = 3.
 
 ***** Ozone vertical profile
 
-      CALL vpo3(ipbl, zpbl, o3pbl, 
-     $       o3_tc, nz, z, aircol, co3)
+      CALL vpo3(ipbl,zpbl,o3pbl,o3_tc,nz,z,aircol,co3)
 
 * ___ SECTION 4: READ SPECTRAL DATA ____________________________
 
 * read (and grid) extra terrestrial flux data:
       
-      CALL rdetfl(nw,wl, f)
+      CALL rdetfl(nw,wl,f)
 
 * read cross section data for 
 *    O2 (will overwrite at Lyman-alpha and SRB wavelengths
@@ -355,12 +346,12 @@ C      zpbl = 3.
 *    SO2 
 *    NO2
 
-      nzm1 = nz - 1
-      CALL rdo2xs(nw,wl, o2xs1)
+      nzm1 = nz-1
+      CALL rdo2xs(nw,wl,o2xs1)
       mabs = 1
-      CALL rdo3xs(mabs,nzm1,tlay,nw,wl, o3xs)
-      CALL rdso2xs(nw,wl, so2xs)
-      CALL rdno2xs(nz,tlay,nw,wl, no2xs)
+      CALL rdo3xs(mabs,nzm1,tlay,nw,wl,o3xs)
+      CALL rdso2xs(nw,wl,so2xs)
+      CALL rdno2xs(nz,tlay,nw,wl,no2xs)
 
 ****** Spectral weighting functions 
 * (Some of these depend on temperature T and pressure P, and therefore
@@ -379,34 +370,30 @@ C      zpbl = 3.
 * from swchem:  sj(kj,kz,kw) - for each reaction jlabel(kj)
 * For swchem, need to know temperature and pressure profiles.
 
-      CALL swphys(nw,wl,wc, ns,sw,slabel)
-      CALL swbiol(nw,wl,wc, ns,sw,slabel)
-      CALL swchem(nw,wl,nz,tlev,aircon, nj,sj,jlabel,tpflag)
+      CALL swphys(nw,wl,wc,ns,sw,slabel)
+      CALL swbiol(nw,wl,wc,ns,sw,slabel)
+      CALL swchem(nw,wl,nz,tlev,aircon,nj,sj,jlabel,tpflag)
 
 ** Read other spectral data
 * absorption coefficients for Dissolved Organic Matter (DOM) in surface waters
 
-      CALL swdom(nw,wl,wc, jdom,dlabel,sdom)
+      CALL swdom(nw,wl,wc,jdom,dlabel,sdom)
 
 * locate indices for some specific spectra:
 
       js_dna = 0
       js_uvi = 0
-      DO is = 1, ns
-         IF(slabel(is) .EQ. 
-     $        'DNA damage, in vitro (Setlow, 1974)               ') 
-     $        js_dna = is
+      DO is = 1,ns
+         IF(slabel(is) .EQ.'DNA damage,in vitro (Setlow,
+     $      1974)               ')js_dna = is
 
-         IF(slabel(is) .EQ. 
-     $        'UV index (WMO, 1994; Webb et al., 2011)')           
-     $        js_uvi = is
+         IF(slabel(is) .EQ.'UV index (WMO,1994; Webb et al.,
+     $      2011)')js_uvi = is
       ENDDO
 
       jd_dom = 0
-      DO jd = 1, jdom
-         if(dlabel(jd) .eq. 
-     $        'Generic DOM absorption')
-     $        jd_dom = jd
+      DO jd = 1,jdom
+         if(dlabel(jd) .eq.'Generic DOM absorption')jd_dom = jd
       ENDDO
 
 !      write(*,*) js_dna, js_uvi, jd_dom
@@ -428,13 +415,13 @@ c      CALL newlst(ns,slabel,nj,jlabel)
 
       wrfchm = .FALSE.
       IF (inpfil .EQ. 'defin5') wrfchm = .TRUE.
-      IF (wrfchm) CALL wrflut(nw, wl, nz, tlev, aircon)
+      IF (wrfchm) CALL wrflut(nw,wl,nz,tlev,aircon)
 
 * ___ SECTION 5: SET ATMOSPHERIC OPTICAL DEPTH INCREMENTS _____________________
 
 * Rayleigh optical depth increments:
 
-      CALL odrl(nz, z, nw, wl, aircol, dtrl)
+      CALL odrl(nz,z,nw,wl,aircol,dtrl)
       
 * O2 vertical profile and O2 absorption optical depths
 *   For now, O2 densitiy assumed as 20.95% of air density, can be changed
@@ -442,49 +429,38 @@ c      CALL newlst(ns,slabel,nj,jlabel)
 *   Optical depths in Lyman-alpha and SRB will be over-written
 *   in subroutine la_srb.f
 
-      CALL seto2(nz,z,nw,wl,aircol,o2xs1, dto2)
+      CALL seto2(nz,z,nw,wl,aircol,o2xs1,dto2)
 
 * Ozone optical depths
 
-      CALL odo3(nz,z,nw,wl,o3xs,co3, dto3)
+      CALL odo3(nz,z,nw,wl,o3xs,co3,dto3)
 
 * SO2 vertical profile and optical depths
 
-      CALL setso2(ipbl, zpbl, so2pbl,
-     $     so2_tc, nz, z, nw, wl, so2xs,
-     $     tlay, aircol,
-     $     dtso2)
+      CALL setso2(ipbl,zpbl,so2pbl,so2_tc,nz,z,nw,wl,so2xs,tlay,aircol,
+     $   dtso2)
 
 * NO2 vertical profile and optical depths
 
-      CALL setno2(ipbl, zpbl, no2pbl, 
-     $     no2_tc, nz, z, nw, wl, no2xs,
-     $     tlay, aircol,
-     $     dtno2)
+      CALL setno2(ipbl,zpbl,no2pbl,no2_tc,nz,z,nw,wl,no2xs,tlay,aircol,
+     $   dtno2)
 
 * Cloud vertical profile, optical depths, single scattering albedo, asymmetry factor
 
-      CALL setcld(taucld,zbase,ztop,
-     $     nz,z,nw,wl,
-     $     dtcld,omcld,gcld)
+      CALL setcld(taucld,zbase,ztop,nz,z,nw,wl,dtcld,omcld,gcld)
 
 * Aerosol vertical profile, optical depths, single scattering albedo, asymmetry factor
 
-      CALL setaer(ipbl, zpbl, aod330,
-     $     tauaer, ssaaer, alpha,
-     $     nz, z, nw, wl,
-     $     dtaer, omaer, gaer)
+      CALL setaer(ipbl,zpbl,aod330,tauaer,ssaaer,alpha,nz,z,nw,wl,dtaer,
+     $   omaer,gaer)
 
 * Snowpack physical and optical depths, single scattering albedo, asymmetry factor
 
-      CALL setsnw(
-     $     nz,z,nw,wl,
-     $     dtsnw,omsnw,gsnw)
+      CALL setsnw(nz,z,nw,wl,dtsnw,omsnw,gsnw)
 
 * Surface albedo
 
-      CALL setalb(alsurf,nw,wl,
-     $     albedo)
+      CALL setalb(alsurf,nw,wl,albedo)
 
 * Set any additional absorber or scatterer:
 * Must populate dt_any(kz,kw), om_any(kz,kw), g_any(kz,kw) manually
@@ -493,8 +469,8 @@ c      CALL newlst(ns,slabel,nj,jlabel)
 C      CALL setany(nz,z,nw,wl,aircol, dt_any,om_any, g_any)
 * or write manually here.
 
-      DO iz = 1, nz-1
-         DO iw = 1, nw-1
+      DO iz = 1,nz-1
+         DO iw = 1,nw-1
 c            dt_any(iz,iw) = 0.79*aircol(iz) * 2.e-17 ! N2 VUV absorption
             dt_any(iz,iw) = 0.
             om_any(iz,iw) = 0.
@@ -513,18 +489,18 @@ c            dt_any(iz,iw) = 0.79*aircol(iz) * 2.e-17 ! N2 VUV absorption
 
 * Loop over time or solar zenith angle (zen):
 
-      DO 20, it = 1, nt
+      DO 20,it = 1,nt
 
          zen = sza(it)
 
 !         WRITE(*,200) it, zen, esfact(it)
-         WRITE(kout,200) it, zen, esfact(it)
- 200     FORMAT('step = ', I4,' sza = ', F9.3, 
-     $        ' Earth-sun factor = ', F10.7)
+         WRITE(kout,200) it,zen,esfact(it)
+ 200     FORMAT('step = ',I4,' sza = ',F9.3,' Earth-sun factor = ',
+     $F10.7)
 
 * correction for earth-sun distance
 
-         DO iw = 1, nw - 1
+         DO iw = 1,nw-1
             etf(iw) = f(iw) * esfact(it)
          ENDDO
 
@@ -532,16 +508,15 @@ c            dt_any(iz,iw) = 0.79*aircol(iz) * 2.e-17 ! N2 VUV absorption
 
 * slant path lengths for spherical geometry
 
-         CALL sphers(nz,z,zen, dsdh,nid)
-         CALL airmas(nz, dsdh,nid, aircol,vcol,scol)
+         CALL sphers(nz,z,zen,dsdh,nid)
+         CALL airmas(nz,dsdh,nid,aircol,vcol,scol)
 
 * Recalculate effective O2 optical depth and cross sections for Lyman-alpha
 * and Schumann-Runge bands, must know zenith angle
 * Then assign O2 cross section to sj(1,*,*)
 
-         CALL la_srb(nz,z,tlev,nw,wl,vcol,scol,o2xs1,
-     $        dto2,o2xs)
-         CALL sjo2(nz,nw,o2xs,1, sj)
+         CALL la_srb(nz,z,tlev,nw,wl,vcol,scol,o2xs1,dto2,o2xs)
+         CALL sjo2(nz,nw,o2xs,1,sj)
 
 * ____ SECTION 8: WAVELENGTH LOOP ______________________________________
 
@@ -554,7 +529,7 @@ c            dt_any(iz,iw) = 0.79*aircol(iz) * 2.e-17 ! N2 VUV absorption
 
 ***** Main wavelength loop:
 
-         DO 10, iw = 1, nw-1
+         DO 10,iw = 1,nw-1
 
 ** monochromatic radiative transfer. Outputs are:
 *  normalized irradiances     edir(iz), edn(iz), eup(iz) 
@@ -562,52 +537,43 @@ c            dt_any(iz,iw) = 0.79*aircol(iz) * 2.e-17 ! N2 VUV absorption
 *  where 
 *  dir = direct beam, dn = down-welling diffuse, up = up-welling diffuse
 
-            CALL rtlink(nstr, nz,
-     $           iw, albedo(iw), zen,
-     $           dsdh,nid,
-     $           dtrl,
-     $           dto3,
-     $           dto2,
-     $           dtso2,
-     $           dtno2,
-     $           dtcld, omcld, gcld,
-     $           dtaer,omaer,gaer,
-     $           dtsnw,omsnw,gsnw,
-     $           dt_any,om_any,g_any,
-     $           edir, edn, eup, fdir, fdn, fup)
+            CALL rtlink(nstr,nz,iw,albedo(iw),zen,dsdh,nid,dtrl,dto3,
+     $         dto2,dtso2,dtno2,dtcld,omcld,gcld,dtaer,omaer,gaer,dtsnw,
+     $         omsnw,gsnw,dt_any,om_any,g_any,edir,edn,eup,fdir,fdn,
+     $         fup)
 
 * Spectral irradiance, W m-2 nm-1
 * for downwelling only, use difup = 0.
 
-            DO iz = 1, nz
-               sirrad(iz,iw) = etf(iw) * 
-     $           (dirsun*edir(iz) + difdn*edn(iz) + difup*eup(iz))
+            DO iz = 1,nz
+               sirrad(iz,iw) = etf(iw) *(dirsun*edir(iz)+difdn*edn(iz)+
+     $            difup*eup(iz))
             ENDDO
 
 * Spectral actinic flux, quanta s-1 nm-1 cm-2, all directions:
 *    units conversion:  1.e-4 * (wc*1e-9) / hc
 
-            DO iz = 1, nz
+            DO iz = 1,nz
                saflux(iz,iw) = etf(iw) * (1.e-13 * wc(iw) / hc) *
-     $              (dirsun*fdir(iz) + difdn*fdn(iz) + difup*fup(iz))
+     $            (dirsun*fdir(iz)+difdn*fdn(iz)+difup*fup(iz))
             ENDDO
 
 *** Accumulate weighted integrals over wavelength, at all altitudes:
 
-            DO iz = 1, nz
+            DO iz = 1,nz
 
 * Weighted irradiances (dose rates) W m-2
 
-               DO is = 1, ns
+               DO is = 1,ns
                   drdw = sirrad(iz,iw) * sw(is,iw) 
-                  rate(is,iz) = rate(is,iz) + drdw * (wu(iw) - wl(iw))
+                  rate(is,iz) = rate(is,iz)+drdw * (wu(iw)-wl(iw))
                ENDDO
 
 * Photolysis rate coefficients (J-values) s-1
 
-               DO ij = 1, nj
+               DO ij = 1,nj
                   djdw = saflux(iz,iw) * sj(ij,iz,iw)
-                  valj(ij,iz) = valj(ij,iz) + djdw * (wu(iw) - wl(iw))
+                  valj(ij,iz) = valj(ij,iz)+djdw * (wu(iw)-wl(iw))
                ENDDO
 
             ENDDO
@@ -627,35 +593,33 @@ c            dt_any(iz,iw) = 0.79*aircol(iz) * 2.e-17 ! N2 VUV absorption
 
             ydepth = 1.
             h2oabs = sdom(jd_dom,iw)
-            CALL waters(zen,h2oabs,ydepth, 
-     $           se_0,de_0,se_y,de_y,se_int,de_int)
+            CALL waters(zen,h2oabs,ydepth,se_0,de_0,se_y,de_y,se_int,
+     $         de_int)
             
 * calculate spectral irradiances in water:
 * irradiance just below air-water interface:
 
-            we_0 = etf(iw) * (se_0*edir(1)*dirsun + 
-     $           de_0*edn(1)*difdn)
+            we_0 = etf(iw) * (se_0*edir(1)*dirsun+de_0*edn(1)*difdn)
 
 * average spectral irradiance in water, from 0 to ydepth = integral / ydepth
 
-            we_int = etf(iw) * (se_int*edir(1)*dirsun + 
-     $           de_int*edn(1)*difdn) / ydepth
+            we_int = etf(iw) * (se_int*edir(1)*dirsun+de_int*edn(1)*
+     $         difdn) / ydepth
 
 * calculate DNA-weighted irradiance, just below surface and
 * averaged from 0 to ydepth
 
             drdw = we_0 * sw(js_dna,iw)
-            wrate0 = wrate0 + drdw * (wu(iw)-wl(iw))
+            wrate0 = wrate0+drdw * (wu(iw)-wl(iw))
 
             drdw = we_int * sw(js_dna,iw)
-            wratei = wratei + drdw * (wu(iw)-wl(iw))
+            wratei = wratei+drdw * (wu(iw)-wl(iw))
                
 
 **** Save irradiances and actinic fluxes for output
 
-            CALL saver1(it, itfix, iw, iwfix,  nz, izout,
-     $           sirrad, saflux,
-     $           svi_zw, svf_zw, svi_zt, svf_zt, svi_tw, svf_tw)
+            CALL saver1(it,itfix,iw,iwfix,nz,izout,sirrad,saflux,svi_zw,
+     $         svf_zw,svi_zt,svf_zt,svi_tw,svf_tw)
  10      CONTINUE
 
 *^^^^^^^^^^^^^^^^ end wavelength loop
@@ -665,24 +629,20 @@ c            dt_any(iz,iw) = 0.79*aircol(iz) * 2.e-17 ! N2 VUV absorption
 * wdose0 = dose in water just below surface
 * wdosei = dose averaged over ydepth
 
-         adose = adose + 
-     $        rate(13,1) * 3600.* (tstop - tstart)/float(nt-1)
-         wdose0 = wdose0 + 
-     $        wrate0 * 3600.* (tstop - tstart)/float(nt-1)
-         wdosei = wdosei + 
-     $        wratei * 3600.* (tstop - tstart)/float(nt-1)
+         adose = adose+rate(13,1) * 3600.* (tstop-tstart)/float(nt-1)
+         wdose0 = wdose0+wrate0 * 3600.* (tstop-tstart)/float(nt-1)
+         wdosei = wdosei+wratei * 3600.* (tstop-tstart)/float(nt-1)
 
 * Save dose rates and j-values for output
 
-         CALL saver2(it,itfix, nz,izout, ns,isfix,ims, nj,ijfix,imj,
-     $        rate, valj,
-     $        svr_zs, svj_zj, svr_zt, svj_zt, svr_ts, svj_tj)
+         CALL saver2(it,itfix,nz,izout,ns,isfix,ims,nj,ijfix,imj,rate,
+     $      valj,svr_zs,svj_zj,svr_zt,svj_zt,svr_ts,svj_tj)
 
  20   CONTINUE
 
 * output in-water doses
 
- !     write(*,222) adose, wdose0, wdosei, dlabel(jd_dom)
+ !     write(*,222) adose,wdose0,wdosei,dlabel(jd_dom)
  222  format(3(0pf10.4,1x),a50)
 
 **output all Js at zout
@@ -699,17 +659,11 @@ c 444  format(1pe11.4,1x,a50)
 
 * ____ SECTION 9: OUTPUT ______________________________________________
 
-      call outpt1( outfil, iout, 
-     $     lirrad, laflux, lrates, ljvals, lmmech, lzenit,
-     $     nms, ims, nmj, imj,
-     $     nz, z, tlev, aircon, izout,
-     $     nw, wl, etf, iwfix,
-     $     nt, t, sza, itfix,
-     $     ns, slabel, isfix, nj, jlabel, ijfix,
-     $     svj_zj, svj_tj, svj_zt,
-     $     svr_zs, svr_ts, svr_zt,
-     $     svf_zw, svf_tw, svf_zt,
-     $     svi_zw, svi_tw, svi_zt)
+      call outpt1( outfil,iout,lirrad,laflux,lrates,ljvals,lmmech,
+     $   lzenit,nms,ims,nmj,imj,nz,z,tlev,aircon,izout,nw,wl,etf,iwfix,
+     $   nt,t,sza,itfix,ns,slabel,isfix,nj,jlabel,ijfix,svj_zj,svj_tj,
+     $   svj_zt,svr_zs,svr_ts,svr_zt,svf_zw,svf_tw,svf_zt,svi_zw,svi_tw,
+     $   svi_zt)
 
  30   continue
  !Cierre del do para la irradincia para cada minuto
