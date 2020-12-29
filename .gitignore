@@ -3,3 +3,12 @@ Data/Aqua/
 Data/OMI/
 Data/OMI_500/
 ResultadosTUV/
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.synctex.gz
+*.out
+*.bbl
+*.blg
+*.dvi
