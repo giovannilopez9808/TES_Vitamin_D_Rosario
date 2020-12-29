@@ -19,7 +19,7 @@ plt.scatter(x, data_vitamin, c="#f72585", label="Modelo TUV", marker=".")
 plt.scatter(x, data_Herman, c="#3a0ca3", label="Herman, 2010", marker=".")
 plt.scatter(x[data_CIE != 0], data_CIE[data_CIE != 0],
             c="#185C27", label="CIE-2014", marker=".")
-plt.ylabel("Irradiancia pre-vitamina D (W/m$^2$)", fontsize=12)
+plt.ylabel("Irradiancia pre-vitamina D$_3$ (W/m$^2$)", fontsize=12)
 plt.xlabel("Periodo 2019-2020", fontsize=12)
 plt.xlim(0, n_days)
 plt.ylim(0, 1)
