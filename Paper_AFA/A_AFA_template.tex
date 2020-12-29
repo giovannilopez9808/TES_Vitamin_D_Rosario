@@ -1,0 +1,281 @@
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+
+% This is a simple template for a LaTeX document using the "article" class.
+% See "book", "report", "letter" for other types of document.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Template para producir documentos "camera ready" para Anales de la AFA
+% 
+%  No se debería tener que modificar nada del siguiente preámbulo, donde están 
+%  las customizaciones para adaptar la clase "article" a los Anales AFA.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[10pt,twocolumn]{article} 
+
+\usepackage[utf8]{inputenc} % set input encoding (not needed with XeLaTeX)
+\usepackage[spanish]{babel}
+
+
+%%% DIMENSIONES DE LA PÁGINA
+\usepackage{geometry} 
+\geometry{a4paper} 
+ \geometry{top=2.25cm} 
+ \geometry{bottom=2.25cm} 
+ \geometry{left=2.5cm} 
+ \geometry{right=2cm} 
+
+
+%%% PACKAGES
+\usepackage{graphicx} 
+\usepackage{paralist} % very flexible & customisable lists (eg. enumerate/itemize, etc.)
+\usepackage{verbatim} % adds environment for commenting out blocks of text & for better verbatim
+\usepackage{subfig} % make it possible to include more than one captioned figure/table in a single float
+\usepackage{lipsum}  
+\usepackage{hyperref}
+\usepackage[superscript]{cite}  %REFERENCIAS EN SUPERÍNDICE
+
+% Ajusta los captions de tablas y figuras a italics
+\usepackage[format=plain,
+            labelfont=it,
+            textfont=it]{caption}
+% These packages are all incorporated in the memoir class to one degree or another...
+
+%%% HEADERS & FOOTERS
+\usepackage{fancyhdr} % This should be set AFTER setting up the page geometry
+\pagestyle{fancy} % options: empty , plain , fancy
+\renewcommand{\headrulewidth}{0pt} % customise the layout...
+\lhead{}\chead{}\rhead{}
+\lfoot{}\cfoot{\thepage}\rfoot{}
+%\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+\usepackage{varwidth}
+\usepackage{authblk}
+\newcommand{\filiacion}[2]{\affil[#1]{\protect\begin{varwidth}[t]{\linewidth}\protect\centering \normalfont#2 \protect\end{varwidth}}}
+\newcommand{\autor}[2]{\author[#1]{\bf #2}}
+\newcommand{\corresponding}[2]{\author[#1]{\bf #2\thanks{}}}
+\newcommand\cauthemail[1]{\footnotetext{#1}}
+\newcommand{\fecha}[1]{\date{\vspace{-1ex}\small{#1}}}
+\newcommand{\titulo}[2]{\title{\bf{\large{#1 \\ \vspace{1.5ex} #2 }}}}
+\newcommand{\esresumen}[1]{\small{#1 \par}\vspace{1.5ex}}
+\newcommand{\pclaves}[1]{\small{\emph{#1} \par}\vspace{1.5ex}}
+\newcommand{\enresumen}[1]{\small{#1 \par}\vspace{1.5ex}}
+\newcommand{\keywords}[1]{\small{\emph{#1} \par}\vspace{1.5ex}}
+
+
+
+%%% APARIENCIA DE TITULOS, SECCIONES Y SUBSECCIONES
+\usepackage{sectsty}
+\allsectionsfont{\fontsize{10}{12}\sffamily\bfseries\upshape} % (See the fntguide.pdf for font help)
+
+\usepackage{titlesec}
+\titlespacing*{\section}{0pt}{1.5ex}{0.8ex}
+\titlespacing*{\subsection}{0pt}{1.2ex}{0.6ex}
+\setcounter{secnumdepth}{1}   %no numera las subsecciones
+
+\usepackage[nottoc,notlof,notlot]{tocbibind} % Put the bibliography in the ToC
+\usepackage[titles,subfigure]{tocloft} % Alter the style of the Table of Contents
+\renewcommand{\cftsecfont}{\rmfamily\mdseries\upshape}
+\renewcommand{\cftsecpagefont}{\rmfamily\mdseries\upshape} % No bold!
+\renewcommand\thesection{\Roman{section}}
+\renewcommand\thesubsection{}
+
+
+
+%%% PARA EL FORMATO DE TABLAS
+\usepackage{booktabs} % for much better looking tables
+\usepackage{array} % for better arrays (eg matrices) in maths
+\makeatletter
+\newcommand{\thickhline}{%
+    \noalign {\ifnum 0=`}\fi \hrule height 1.5pt
+    \futurelet \reserved@a \@xhline
+}
+\newcolumntype{"}{@{\hskip\tabcolsep\vrule width 1pt\hskip\tabcolsep}}
+\makeatother
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+\renewcommand\spanishtablename{Tabla}  
+
+% Corresponding author
+\makeatletter
+\renewcommand\@biblabel[1]{#1.}
+\makeatother
+
+\pagestyle{empty}
+
+%%%%%% En principio no debería hacer falta modificar nada por encima de esta línea
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%% El contenido del documento comienza a partir de acá 
+
+%título del trabajo: en el primer campo en castellano, en el segundo en inglés
+\titulo{COMPARACIÓN DE TRES MÉTODOS DE DERIVACIÓN DE LA IRRADIANCIA SOLAR EFECTIVA PARA LA PRODUCCIÓN DE PRE-VITAMINA D\textsubscript{3} EN LA PIEL, EN LA CIUDAD DE ROSARIO, ARGENTINA}{COMPARISON OF THREE DERIVATION METHODS OF EFFECTIVE SOLAR IRRADIANCE FOR THE PRODUCTION OF PRE-VITAMIN D\textsubscript{3} ON THE SKIN, IN ROSARIO, ARGENTINA}
+
+\autor{1}{M. Dávalos}
+\autor{2}{A. Ipiña}
+\autor{3}{G. López-Padilla}
+\autor{2}{R. D. Piacentini}
+
+%afiliaciones: se pueden combinar
+\filiacion{1}{Investigadora Independiente, (64810) México}
+\filiacion{2}{Instituto de Física Rosario (IFIR) – Universidad Nacional Rosario – Consejo Nacional de Investigaciones Científicas y
+Técnicas, 27 de Febrero 210BIS – (S2000EKF) Rosario – Argentina.}
+\filiacion{3}{Facultad de Ciencias Físico Matemáticas – Universidad Autónoma de Nuevo León, Pedro de Alba S/N - Ciudad
+Universitaria San Nicolás de los Garza (66451) – México.}
+
+\fecha{Recibido: xx/xx/xx; Aceptado: xx/xx/xx} %No modificar
+
+
+\setcounter{Maxaffil}{0}
+\renewcommand\Affilfont{\itshape\small}
+
+
+\begin{document}
+
+\renewcommand{\abstractname}{}
+\twocolumn[
+  \begin{@twocolumnfalse}
+   \maketitle
+    \begin{abstract}\vspace{-12ex}
+\centering\begin{minipage}{\dimexpr\paperwidth-6cm}
+
+%Abstract en castellano
+\esresumen{En los últimos años, el interés por el estudio de la vitamina D ha aumentado debido a la frecuencia incidente en
+las personas que presentan deficiencia de esta vitamina, ya que muy pocos alimentos la contienen de manera
+natural. Sin embargo, es posible generar la pre-vitamina D\textsubscript{3} a través de la piel cuando es expuesta a la radiación
+solar ultravioleta. En este estudio se determina la irradiancia solar efectiva para la producción de pre-vitamina D\textsubscript{3}
+en la ciudad de Rosario, Argentina, utilizando tres métodos: a) modelo TUV, b) fórmula de CIE-2014 sobre
+mediciones de índice UV y c) ecuación de Herman. Se desarrolló un código en python para optimizar la descarga
+de datos satelitales, calcular las integrales para obtener las dosis de la irradiancia pre-vitamina D\textsubscript{3} y eritémica, así
+como los tiempos de exposición solar (TES). Además, compara los valores de dichas irradiancias en condiciones
+de cielo despejado. Se discute la variación de los tiempos de exposición solar que alcanzan la dosis mínima de
+pre-vitamina D\textsubscript{3} con una exposición del 25\% del cuerpo (cara, cuello y brazos).}
+\pclaves{Palabras Clave: radiación solar UV, vitamina D, dosis, métodos, Argentina.} %palabras clave
+
+%Abstract en inglés
+\enresumen{In the last few years, the interest in the study of vitamin D has grown due to the frequent people showing
+deficiency of this vitamin since very few foods contain it naturally. However, it is possible to generate
+pre-vitamin D\textsubscript{3} through the skin when it is exposed to ultraviolet solar radiation. In this study we determine the
+effective solar irradiance production of pre-vitamin D\textsubscript{3} in Rosario, Argentina using three methods: a) TUV model,
+b) CIE-2014 formula applied on UV index measurements and c) Herman’s (2010) equation. We developed a
+python code in order to optimize the download of satellite data, integrate the doses of pre-vitamin D\textsubscript{3} and
+erythemic irradiance, as well as the solar exposure times (TES). In addition, the python script compares the values
+of these irradiances in clear-sky conditions. We discuss the variation of the TES that reach the minimum dose of
+pre-vitamin D\textsubscript{3} with a 25\% exposure of the body (face, neck and arms).}
+\keywords{UV solar radiation, vitamin D, doses, methods, Argentina.}  %key words
+
+\end{minipage}
+\vspace{4ex}
+ \end{abstract}
+  \end{@twocolumnfalse}
+]
+
+\thispagestyle{empty}
+
+\setcounter{footnote}{1}
+\cauthemail{zgamma@citedef.gob.ar}  % Dirección de correo electrónico del corresponding author
+
+\section{INTRODUCCIÓN}
+Estas instrucciones tienen como objetivo ayudar a los autores que deseen publicar en ANALES AFA a preparar sus manuscritos para una reproducción directa foto-offset. Los textos no sufrirán ninguna reducción adicional. De esta manera saldrán publicados en la forma que los autores prefieran, le darán uniformidad a los ANALES y resultará en una más eficiente, económica y rápida impresión de los mismos. 
+
+Este documento es en sí mismo un ejemplo de cómo quedarán los trabajos en su forma final para publicación. Los artículos deben ser escritos en ESPAÑOL, con título y resumen en ESPAÑOL y ambos en INGLÉS; esto último es a los fines de su inclusión en los sistemas internacionales de citaciones. Por lo mismo, se definirán palabras clave tanto en español como en inglés.
+
+
+\section{MÉTODOS}
+\subsection{Instrucciones para la escritura}
+Los manuscritos deben inscribirse en un rectángulo de 17 $\times$ 25,2 cm$^2$, como se muestra en la Fig. 1, en papel formato DIN A4 (21 $\times$ 29,7 cm$^2$) y respetando los márgenes que se indican.
+
+Se solicita a los autores que generen sus manuscritos en un procesador de texto de uso difundido. No remitir copias electrónicas en soporte físico. Deben enviarse en formato PDF (para revisión), y la versión final ya corregida y aprobada se entregará tanto en PDF como en DOC, siempre por correo electrónico, a la dirección analesafaba@gmail.com y con copia a la dirección analesafatan@gmail.com. 
+El presente documento, así como las instrucciones en general y sobre cómo publicar en los ANALES, estará disponible via INTERNET en breve. Este documento ha sido escrito en WORD 6.0 e incluye las especificaciones de todos los estilos necesarios; puede por tanto ser utilizado como plantilla sobreescribiendo en el mismo. Por favor, NO INCLUYA numeración de páginas.
+
+\subsection{Tipos de letra y espaciado de líneas}
+Todo manuscrito debe tener espaciado simple, incrementándolo automáticamente para subíndices y supraíndices. Debe usarse fuente Times New Roman y generarse en dos columnas. Se ahorran todos estos ajustes al usar este template en \LaTeX.
+En la Tabla 1 se muestran los tamaños de fuentes, formatos de párrafo y separación entre secciones. Por ejemplo, el párrafo normal requiere una sangría de 1 cm y una separación de 6 pts. entre párrafos. Recuerde que 1 \emph{point} = 1 pt. $\cong$ 0.25 mm. La lista de Estilos de la Tabla 1 también está incluida en el archivo asociado al presente documento.
+
+\subsection{Material ilustrativo}
+
+%tabla grande, ocupa el doble ancho de la página. LaTeX las ubica al principio de la hoja
+\begin{table*}[t]  
+\centering
+\caption{Estilo recomendado de tabla a doble columna}
+\label{tabl:tab1}
+\begin{tabular}{|cccc|}
+\hline
+Día       & Temp. min & Temp. Max & Resumen                       \\ \thickhline
+Lunes     & 284 K     & 296 K     & Soleado, despejado            \\ \hline
+Martes    & 285 K     & 297 K     & Soleado, despejado            \\ \hline
+Miércoles & 281 K      & 293 K     & Parcialmente nublado, ventoso \\ \hline
+Jueves    & 284 K     & 293  K     & Parcialmente nublado          \\ \hline
+Viernes   & 284 K     & 291 K     & Lluvioso                      \\ \hline
+Sábado    & 285 K     & 292 K     & Nublado                       \\ \hline
+\end{tabular}
+\end{table*}
+
+Las Figuras y Tablas se incluyen en el documento, en el sitio en que el autor lo considere más conveniente. Las leyendas de las Figuras deben anotarse debajo de ellas, como en la Fig. \ref{fig:figura1}, mientras que los títulos de las Tablas deben aparecer directamente arriba de las mismas. El ancho de las Figuras o Tablas puede extenderse a las dos columnas (Tabla \ref{tabl:tab1} y Tabla \ref{tabl:singlecolumn}).
+
+\subsection{Formato de las ecuaciones}
+Las ecuaciones deben centrarse en la columna y con su número de orden entre paréntesis, alineado por derecha. En el caso de cita de ecuaciones, poner las mismas al nivel del renglón; por ejemplo, (ver ec. \ref{eq:four}).
+
+\begin{equation}
+  \rho''=\varepsilon(\rho')=A_{1}\rho' A_{1}^{\dag}+A_{2}\rho' A_{2}^{\dag}
+ \label{eq:four}
+\end{equation}
+
+
+\subsection{Formato de las referencias}
+Para las referencias ha de seguirse el formato de las revistas de la APS. Se deben entonces hacer las llamadas por número levantado\cite{fuchs1975theory} sobre el renglón y generar un único listado por orden de citación al final del texto. Para evitar confusión con otras llamadas, usar para éstas símbolos distintos. En el listado de referencias, incluir los títulos en el caso de artículos\cite{imoto197221}, libros, monografías, tesis, etc. La abreviación de revistas puede consultarse en \url{https://images.webofknowledge.com/WOK46P9/help/WOS/A_abrvjt.html}
+
+\section{OTROS TEMAS}
+
+   \begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.48\textwidth]{layoutpage.pdf}
+  \caption{Formato de página recomendado}
+  \label{fig:figura1}
+  \end{figure}
+
+\lipsum[1-3]
+
+%tabla a single column; los anchos de las columnas están definidos en la línea \begin{tabular}. Si hacen falta más columnas
+%que las L, C y R hay que definirlas en el preámbulo (sección FORMATO DE TABLAS), replicando las que ya están con otro nombre
+\begin{table}
+\small
+\centering
+\caption{Estilo para tabla a una columna}
+\label{tabl:singlecolumn}
+\begin{tabular}{| L{2.2cm} | C{2.2cm} | R{2.2cm} |}
+\hline
+Columna 1 &
+Columna 2 &
+Columna 3  \\  \thickhline
+Celda con texto que se ajusta al ancho, alineado a la izquierda y permite \newline
+   saltos de línea manuales &
+Celda con texto que se ajusta al ancho, centrado y que premite \newline
+    saltos de línea manuales &
+Celda con texto que se ajusta al ancho, alineado a la derecha y permite \newline
+   saltos de línea manuales \\  \hline
+Detalles del formato  en el preámbulo de este documento \LaTeX  &
+Detalles del formato  en el preámbulo de este documento \LaTeX &
+Detalles del formato  en el preámbulo de este documento \LaTeX \\ \hline
+Detalles del formato  en el preámbulo de este documento \LaTeX  &
+Detalles del formato  en el preámbulo de este documento \LaTeX &
+Detalles del formato  en el preámbulo de este documento \LaTeX \\ 
+ \hline
+\end{tabular}
+\end{table}
+
+\lipsum[4-8]
+
+\section{REFERENCIAS
+\vspace{-3ex}}  % hace 
+
+\bibliographystyle{abbrv}
+\renewcommand{\bibname}{}
+%\bibliographystyle{spbasic}
+ \bibliography{referencias_anales}
+
+\end{document}
