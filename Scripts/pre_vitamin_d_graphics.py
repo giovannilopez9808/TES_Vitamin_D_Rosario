@@ -14,17 +14,17 @@ data_vitamin = np.loadtxt(
     dir_vitamin_d+"sza_vitamin_max.csv", delimiter=",", skiprows=1, usecols=2)
 data_Herman = np.loadtxt(
     dir_vitamin_d+"CIE_Herman_data.csv", delimiter=",", skiprows=1, unpack=True, usecols=1)
-data_CIE_jul = np.loadtxt(
-    dir_vitamin_d+"CIE_Herman_data.csv", delimiter=",", skiprows=31, unpack=True, usecols=0, max_rows=31)
-data_CIE_dic = np.loadtxt(
-    dir_vitamin_d+"CIE_Herman_data.csv", delimiter=",", skiprows=184, unpack=True, usecols=0, max_rows=31)
+data_CIE_ver = np.loadtxt(
+    dir_vitamin_d+"CIE_Herman_data.csv", delimiter=",", skiprows=21, unpack=True, usecols=0, max_rows=91)
+data_CIE_inv = np.loadtxt(
+    dir_vitamin_d+"CIE_Herman_data.csv", delimiter=",", skiprows=204, unpack=True, usecols=0, max_rows=91)
 x = np.arange(n_days)
-x2 = np.arange(31)
+x2 = np.arange(91)
 plt.scatter(x, data_vitamin, c="#f72585", label="Modelo TUV", marker=".")
-plt.scatter(x, data_Herman, c="#3a0ca3", label="Herman 2010", marker=".")
-plt.scatter(x2[data_CIE_jul != 0]+31, data_CIE_jul[data_CIE_jul != 0],
-            c="#185C27", label="CIE 2014", marker=".")
-plt.scatter(x2[data_CIE_dic != 0]+183, data_CIE_dic[data_CIE_dic != 0],
+plt.scatter(x, data_Herman, c="#3a0ca3", label="Herman", marker=".")
+plt.scatter(x2[data_CIE_ver != 0]+20, data_CIE_ver[data_CIE_ver != 0],
+            c="#185C27", label="CIE", marker=".")
+plt.scatter(x2[data_CIE_inv != 0]+203, data_CIE_inv[data_CIE_inv != 0],
             c="#185C27", marker=".")
 plt.ylabel("Irradiancia pre-vitamina D$_3$ (W/m$^2$)", fontsize=12)
 plt.xlabel("Periodo 2019-2020", fontsize=12)
