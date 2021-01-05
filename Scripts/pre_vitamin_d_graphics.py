@@ -23,7 +23,7 @@ x2 = np.arange(91)
 plt.scatter(x, data_vitamin, c="#f72585", label="Modelo TUV", marker=".")
 plt.scatter(x, data_Herman, c="#3a0ca3", label="Herman", marker=".")
 plt.scatter(x2[data_CIE_ver != 0]+20, data_CIE_ver[data_CIE_ver != 0],
-            c="#185C27", label="CIE", marker=".")
+            c="#185C27", label="CIE-WMO", marker=".")
 plt.scatter(x2[data_CIE_inv != 0]+203, data_CIE_inv[data_CIE_inv != 0],
             c="#185C27", marker=".")
 plt.ylabel("Irradiancia pre-vitamina D$_3$ (W/m$^2$)", fontsize=12)
