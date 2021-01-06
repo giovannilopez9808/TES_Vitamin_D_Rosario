@@ -9,7 +9,7 @@ def part_period(data, skip):
 
 def RD(data1, data2, text_data1, text_data2, period):
     cond = data2 != 0
-    rd = np.round(np.abs(np.mean((data1[cond]-data2[cond])/data2[cond])),4)
+    rd = np.round(np.mean(np.abs((data1[cond]-data2[cond])/data2[cond])),4)*100
     print("RD "+period+" "+text_data1+" "+text_data2+" "+str(rd))
 
 
@@ -60,3 +60,4 @@ RD(data_vitamin_inv, data_CIE_inv, "TUV", "CIE", "Invierno")
 RD(data_vitamin_ver, data_CIE_ver, "TUV", "CIE", "Verano")
 RD(data_Herman_inv, data_CIE_inv, "Herman", "CIE", "Invierno")
 RD(data_Herman_ver, data_CIE_ver, "Herman", "CIE", "Verano")
+RD(data_Herman,data_vitamin,"Hermam","TUV", "")
