@@ -22,7 +22,7 @@ def get_season(date):
 
 
 inputs = {
-    "path data": "../PreVitamin_D/",
+    "path data": "../PreVitamin_D/Rosario/",
     "seasons": ["Summer",
                 "Autumn",
                 "Spring",
@@ -41,5 +41,5 @@ for file in files:
     data_max[season]["Count"] = data_max[season]["Count"]+1
 for season in inputs["seasons"]:
     data_max[season]["Sum"] = round(
-        data_max[season]["Sum"]/data_max[season]["Count"], 3)
+        data_max[season]["Sum"]/data_max[season]["Count"], 2)
 print(data_max)

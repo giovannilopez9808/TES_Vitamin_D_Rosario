@@ -1,0 +1,1128 @@
+TUV inputs:
+==================================================================
+inpfil =        PUNA   outfil =        cdmx   nstr =            -2
+lat =        -53.163   lon =        -70.908   tmzone =        -3.0
+iyear =         2016   imonth =           1   iday =             9
+zstart =       0.034   zstop =       80.000   nz =              81
+wstart =     280.000   wstop =      400.000   nwint =          120
+tstart =      10.000   tstop =       15.000   nt =              61
+lzenit =           F   alsurf =       0.080   psurf =       -999.0
+o3col =      228.380   so2col =       0.000   no2col =       0.100
+taucld =       0.000   zbase =        4.000   ztop =         5.000
+tauaer =       0.150   ssaaer =       0.930   alpha =        1.000
+dirsun =       1.000   difdn =        1.000   difup =        0.000
+zout =         0.034   zaird =   -9.990E+02   ztemp =     -999.000
+lirrad =           T   laflux =           F   lmmech =           F
+lrates =           T   isfix =            0   nms =              2
+ljvals =           F   ijfix =            0   nmj =              0
+iwfix =            0   itfix =            0   izfix =            0
+==================================================================
+==== Spectral weighting functions used:
+T  1 UV index (WMO, 1994; Webb et al., 2011)           
+T  2 Previtamin-D3 (CIE 2006)                          
+==== Photolysis reactions used:
+==================================================================
+ air temperature: USSA, 1976
+ air concentrations: USSA, 1976
+ ozone profile: USSA, 1976
+ DATAE1/SUN/susim_hi.flx
+ DATAE1/SUN/atlas3_1994_317_a.dat        
+ DATAE1/SUN/neckel.flx                   
+ DATAE1/SUN/sao2010.solref.converted     
+ aerosols:  Elterman (1968) continental profile
+step =    1 sza =    77.408 Earth-sun factor =  0.9734696
+step =    2 sza =    77.308 Earth-sun factor =  0.9734707
+step =    3 sza =    77.209 Earth-sun factor =  0.9734707
+step =    4 sza =    77.110 Earth-sun factor =  0.9734707
+step =    5 sza =    77.012 Earth-sun factor =  0.9734707
+step =    6 sza =    76.915 Earth-sun factor =  0.9734707
+step =    7 sza =    76.818 Earth-sun factor =  0.9734707
+step =    8 sza =    76.720 Earth-sun factor =  0.9734721
+step =    9 sza =    76.624 Earth-sun factor =  0.9734721
+step =   10 sza =    76.528 Earth-sun factor =  0.9734721
+step =   11 sza =    76.433 Earth-sun factor =  0.9734721
+step =   12 sza =    76.338 Earth-sun factor =  0.9734721
+step =   13 sza =    76.243 Earth-sun factor =  0.9734721
+step =   14 sza =    76.148 Earth-sun factor =  0.9734733
+step =   15 sza =    76.055 Earth-sun factor =  0.9734733
+step =   16 sza =    75.962 Earth-sun factor =  0.9734733
+step =   17 sza =    75.870 Earth-sun factor =  0.9734733
+step =   18 sza =    75.778 Earth-sun factor =  0.9734733
+step =   19 sza =    75.685 Earth-sun factor =  0.9734746
+step =   20 sza =    75.594 Earth-sun factor =  0.9734746
+step =   21 sza =    75.503 Earth-sun factor =  0.9734746
+step =   22 sza =    75.413 Earth-sun factor =  0.9734746
+step =   23 sza =    75.323 Earth-sun factor =  0.9734746
+step =   24 sza =    75.234 Earth-sun factor =  0.9734746
+step =   25 sza =    75.145 Earth-sun factor =  0.9734758
+step =   26 sza =    75.056 Earth-sun factor =  0.9734758
+step =   27 sza =    74.969 Earth-sun factor =  0.9734758
+step =   28 sza =    74.882 Earth-sun factor =  0.9734758
+step =   29 sza =    74.795 Earth-sun factor =  0.9734758
+step =   30 sza =    74.709 Earth-sun factor =  0.9734758
+step =   31 sza =    74.622 Earth-sun factor =  0.9734771
+step =   32 sza =    74.537 Earth-sun factor =  0.9734771
+step =   33 sza =    74.452 Earth-sun factor =  0.9734771
+step =   34 sza =    74.368 Earth-sun factor =  0.9734771
+step =   35 sza =    74.284 Earth-sun factor =  0.9734771
+step =   36 sza =    74.200 Earth-sun factor =  0.9734783
+step =   37 sza =    74.117 Earth-sun factor =  0.9734783
+step =   38 sza =    74.035 Earth-sun factor =  0.9734783
+step =   39 sza =    73.954 Earth-sun factor =  0.9734783
+step =   40 sza =    73.873 Earth-sun factor =  0.9734783
+step =   41 sza =    73.792 Earth-sun factor =  0.9734783
+step =   42 sza =    73.711 Earth-sun factor =  0.9734796
+step =   43 sza =    73.631 Earth-sun factor =  0.9734796
+step =   44 sza =    73.552 Earth-sun factor =  0.9734796
+step =   45 sza =    73.474 Earth-sun factor =  0.9734796
+step =   46 sza =    73.396 Earth-sun factor =  0.9734796
+step =   47 sza =    73.317 Earth-sun factor =  0.9734808
+step =   48 sza =    73.241 Earth-sun factor =  0.9734808
+step =   49 sza =    73.164 Earth-sun factor =  0.9734808
+step =   50 sza =    73.088 Earth-sun factor =  0.9734808
+step =   51 sza =    73.013 Earth-sun factor =  0.9734808
+step =   52 sza =    72.939 Earth-sun factor =  0.9734808
+step =   53 sza =    72.863 Earth-sun factor =  0.9734820
+step =   54 sza =    72.790 Earth-sun factor =  0.9734820
+step =   55 sza =    72.717 Earth-sun factor =  0.9734820
+step =   56 sza =    72.644 Earth-sun factor =  0.9734820
+step =   57 sza =    72.572 Earth-sun factor =  0.9734820
+step =   58 sza =    72.501 Earth-sun factor =  0.9734820
+step =   59 sza =    72.429 Earth-sun factor =  0.9734833
+step =   60 sza =    72.358 Earth-sun factor =  0.9734833
+step =   61 sza =    72.289 Earth-sun factor =  0.9734833
+ air temperature: USSA, 1976
+ air concentrations: USSA, 1976
+ ozone profile: USSA, 1976
+ DATAE1/SUN/susim_hi.flx
+ DATAE1/SUN/atlas3_1994_317_a.dat        
+ DATAE1/SUN/neckel.flx                   
+ DATAE1/SUN/sao2010.solref.converted     
+ aerosols:  Elterman (1968) continental profile
+step =    1 sza =    72.289 Earth-sun factor =  0.9734833
+step =    2 sza =    72.220 Earth-sun factor =  0.9734833
+step =    3 sza =    72.151 Earth-sun factor =  0.9734833
+step =    4 sza =    72.082 Earth-sun factor =  0.9734845
+step =    5 sza =    72.014 Earth-sun factor =  0.9734845
+step =    6 sza =    71.948 Earth-sun factor =  0.9734845
+step =    7 sza =    71.881 Earth-sun factor =  0.9734845
+step =    8 sza =    71.815 Earth-sun factor =  0.9734845
+step =    9 sza =    71.750 Earth-sun factor =  0.9734845
+step =   10 sza =    71.685 Earth-sun factor =  0.9734858
+step =   11 sza =    71.621 Earth-sun factor =  0.9734858
+step =   12 sza =    71.557 Earth-sun factor =  0.9734858
+step =   13 sza =    71.494 Earth-sun factor =  0.9734858
+step =   14 sza =    71.432 Earth-sun factor =  0.9734858
+step =   15 sza =    71.370 Earth-sun factor =  0.9734858
+step =   16 sza =    71.308 Earth-sun factor =  0.9734870
+step =   17 sza =    71.248 Earth-sun factor =  0.9734870
+step =   18 sza =    71.188 Earth-sun factor =  0.9734870
+step =   19 sza =    71.128 Earth-sun factor =  0.9734870
+step =   20 sza =    71.070 Earth-sun factor =  0.9734870
+step =   21 sza =    71.010 Earth-sun factor =  0.9734883
+step =   22 sza =    70.953 Earth-sun factor =  0.9734883
+step =   23 sza =    70.896 Earth-sun factor =  0.9734883
+step =   24 sza =    70.839 Earth-sun factor =  0.9734883
+step =   25 sza =    70.784 Earth-sun factor =  0.9734883
+step =   26 sza =    70.729 Earth-sun factor =  0.9734883
+step =   27 sza =    70.673 Earth-sun factor =  0.9734895
+step =   28 sza =    70.619 Earth-sun factor =  0.9734895
+step =   29 sza =    70.566 Earth-sun factor =  0.9734895
+step =   30 sza =    70.513 Earth-sun factor =  0.9734895
+step =   31 sza =    70.461 Earth-sun factor =  0.9734895
+step =   32 sza =    70.408 Earth-sun factor =  0.9734909
+step =   33 sza =    70.357 Earth-sun factor =  0.9734909
+step =   34 sza =    70.307 Earth-sun factor =  0.9734909
+step =   35 sza =    70.258 Earth-sun factor =  0.9734909
+step =   36 sza =    70.209 Earth-sun factor =  0.9734909
+step =   37 sza =    70.160 Earth-sun factor =  0.9734909
+step =   38 sza =    70.111 Earth-sun factor =  0.9734920
+step =   39 sza =    70.064 Earth-sun factor =  0.9734920
+step =   40 sza =    70.018 Earth-sun factor =  0.9734920
+step =   41 sza =    69.972 Earth-sun factor =  0.9734920
+step =   42 sza =    69.927 Earth-sun factor =  0.9734920
+step =   43 sza =    69.882 Earth-sun factor =  0.9734920
+step =   44 sza =    69.837 Earth-sun factor =  0.9734934
+step =   45 sza =    69.793 Earth-sun factor =  0.9734934
+step =   46 sza =    69.751 Earth-sun factor =  0.9734934
+step =   47 sza =    69.709 Earth-sun factor =  0.9734934
+step =   48 sza =    69.667 Earth-sun factor =  0.9734934
+step =   49 sza =    69.625 Earth-sun factor =  0.9734945
+step =   50 sza =    69.585 Earth-sun factor =  0.9734945
+step =   51 sza =    69.546 Earth-sun factor =  0.9734945
+step =   52 sza =    69.507 Earth-sun factor =  0.9734945
+step =   53 sza =    69.468 Earth-sun factor =  0.9734945
+step =   54 sza =    69.431 Earth-sun factor =  0.9734945
+step =   55 sza =    69.393 Earth-sun factor =  0.9734957
+step =   56 sza =    69.356 Earth-sun factor =  0.9734957
+step =   57 sza =    69.321 Earth-sun factor =  0.9734957
+step =   58 sza =    69.286 Earth-sun factor =  0.9734957
+step =   59 sza =    69.251 Earth-sun factor =  0.9734957
+step =   60 sza =    69.218 Earth-sun factor =  0.9734957
+step =   61 sza =    69.183 Earth-sun factor =  0.9734970
+ air temperature: USSA, 1976
+ air concentrations: USSA, 1976
+ ozone profile: USSA, 1976
+ DATAE1/SUN/susim_hi.flx
+ DATAE1/SUN/atlas3_1994_317_a.dat        
+ DATAE1/SUN/neckel.flx                   
+ DATAE1/SUN/sao2010.solref.converted     
+ aerosols:  Elterman (1968) continental profile
+step =    1 sza =    69.183 Earth-sun factor =  0.9734970
+step =    2 sza =    69.151 Earth-sun factor =  0.9734970
+step =    3 sza =    69.119 Earth-sun factor =  0.9734970
+step =    4 sza =    69.088 Earth-sun factor =  0.9734970
+step =    5 sza =    69.058 Earth-sun factor =  0.9734970
+step =    6 sza =    69.027 Earth-sun factor =  0.9734982
+step =    7 sza =    68.997 Earth-sun factor =  0.9734982
+step =    8 sza =    68.969 Earth-sun factor =  0.9734982
+step =    9 sza =    68.941 Earth-sun factor =  0.9734982
+step =   10 sza =    68.914 Earth-sun factor =  0.9734982
+step =   11 sza =    68.888 Earth-sun factor =  0.9734982
+step =   12 sza =    68.861 Earth-sun factor =  0.9734996
+step =   13 sza =    68.835 Earth-sun factor =  0.9734996
+step =   14 sza =    68.811 Earth-sun factor =  0.9734996
+step =   15 sza =    68.787 Earth-sun factor =  0.9734996
+step =   16 sza =    68.764 Earth-sun factor =  0.9734996
+step =   17 sza =    68.740 Earth-sun factor =  0.9735007
+step =   18 sza =    68.718 Earth-sun factor =  0.9735007
+step =   19 sza =    68.697 Earth-sun factor =  0.9735007
+step =   20 sza =    68.677 Earth-sun factor =  0.9735007
+step =   21 sza =    68.657 Earth-sun factor =  0.9735007
+step =   22 sza =    68.638 Earth-sun factor =  0.9735007
+step =   23 sza =    68.618 Earth-sun factor =  0.9735021
+step =   24 sza =    68.600 Earth-sun factor =  0.9735021
+step =   25 sza =    68.583 Earth-sun factor =  0.9735021
+step =   26 sza =    68.567 Earth-sun factor =  0.9735021
+step =   27 sza =    68.551 Earth-sun factor =  0.9735021
+step =   28 sza =    68.536 Earth-sun factor =  0.9735021
+step =   29 sza =    68.520 Earth-sun factor =  0.9735032
+step =   30 sza =    68.506 Earth-sun factor =  0.9735032
+step =   31 sza =    68.493 Earth-sun factor =  0.9735032
+step =   32 sza =    68.481 Earth-sun factor =  0.9735032
+step =   33 sza =    68.469 Earth-sun factor =  0.9735032
+step =   34 sza =    68.457 Earth-sun factor =  0.9735045
+step =   35 sza =    68.446 Earth-sun factor =  0.9735045
+step =   36 sza =    68.436 Earth-sun factor =  0.9735045
+step =   37 sza =    68.427 Earth-sun factor =  0.9735045
+step =   38 sza =    68.419 Earth-sun factor =  0.9735045
+step =   39 sza =    68.411 Earth-sun factor =  0.9735045
+step =   40 sza =    68.403 Earth-sun factor =  0.9735057
+step =   41 sza =    68.397 Earth-sun factor =  0.9735057
+step =   42 sza =    68.391 Earth-sun factor =  0.9735057
+step =   43 sza =    68.386 Earth-sun factor =  0.9735057
+step =   44 sza =    68.382 Earth-sun factor =  0.9735057
+step =   45 sza =    68.378 Earth-sun factor =  0.9735057
+step =   46 sza =    68.374 Earth-sun factor =  0.9735072
+step =   47 sza =    68.372 Earth-sun factor =  0.9735072
+step =   48 sza =    68.370 Earth-sun factor =  0.9735072
+step =   49 sza =    68.369 Earth-sun factor =  0.9735072
+step =   50 sza =    68.369 Earth-sun factor =  0.9735072
+step =   51 sza =    68.368 Earth-sun factor =  0.9735083
+step =   52 sza =    68.369 Earth-sun factor =  0.9735083
+step =   53 sza =    68.371 Earth-sun factor =  0.9735083
+step =   54 sza =    68.374 Earth-sun factor =  0.9735083
+step =   55 sza =    68.377 Earth-sun factor =  0.9735083
+step =   56 sza =    68.381 Earth-sun factor =  0.9735083
+step =   57 sza =    68.384 Earth-sun factor =  0.9735097
+step =   58 sza =    68.389 Earth-sun factor =  0.9735097
+step =   59 sza =    68.395 Earth-sun factor =  0.9735097
+step =   60 sza =    68.402 Earth-sun factor =  0.9735097
+step =   61 sza =    68.409 Earth-sun factor =  0.9735097
+ air temperature: USSA, 1976
+ air concentrations: USSA, 1976
+ ozone profile: USSA, 1976
+ DATAE1/SUN/susim_hi.flx
+ DATAE1/SUN/atlas3_1994_317_a.dat        
+ DATAE1/SUN/neckel.flx                   
+ DATAE1/SUN/sao2010.solref.converted     
+ aerosols:  Elterman (1968) continental profile
+step =    1 sza =    68.409 Earth-sun factor =  0.9735097
+step =    2 sza =    68.416 Earth-sun factor =  0.9735108
+step =    3 sza =    68.424 Earth-sun factor =  0.9735108
+step =    4 sza =    68.433 Earth-sun factor =  0.9735108
+step =    5 sza =    68.443 Earth-sun factor =  0.9735108
+step =    6 sza =    68.454 Earth-sun factor =  0.9735108
+step =    7 sza =    68.465 Earth-sun factor =  0.9735108
+step =    8 sza =    68.476 Earth-sun factor =  0.9735119
+step =    9 sza =    68.489 Earth-sun factor =  0.9735119
+step =   10 sza =    68.502 Earth-sun factor =  0.9735119
+step =   11 sza =    68.516 Earth-sun factor =  0.9735119
+step =   12 sza =    68.531 Earth-sun factor =  0.9735119
+step =   13 sza =    68.546 Earth-sun factor =  0.9735119
+step =   14 sza =    68.561 Earth-sun factor =  0.9735132
+step =   15 sza =    68.577 Earth-sun factor =  0.9735132
+step =   16 sza =    68.595 Earth-sun factor =  0.9735132
+step =   17 sza =    68.613 Earth-sun factor =  0.9735132
+step =   18 sza =    68.631 Earth-sun factor =  0.9735132
+step =   19 sza =    68.650 Earth-sun factor =  0.9735145
+step =   20 sza =    68.670 Earth-sun factor =  0.9735145
+step =   21 sza =    68.690 Earth-sun factor =  0.9735145
+step =   22 sza =    68.712 Earth-sun factor =  0.9735145
+step =   23 sza =    68.734 Earth-sun factor =  0.9735145
+step =   24 sza =    68.757 Earth-sun factor =  0.9735145
+step =   25 sza =    68.779 Earth-sun factor =  0.9735159
+step =   26 sza =    68.803 Earth-sun factor =  0.9735159
+step =   27 sza =    68.828 Earth-sun factor =  0.9735159
+step =   28 sza =    68.853 Earth-sun factor =  0.9735159
+step =   29 sza =    68.879 Earth-sun factor =  0.9735159
+step =   30 sza =    68.906 Earth-sun factor =  0.9735159
+step =   31 sza =    68.932 Earth-sun factor =  0.9735170
+step =   32 sza =    68.960 Earth-sun factor =  0.9735170
+step =   33 sza =    68.988 Earth-sun factor =  0.9735170
+step =   34 sza =    69.018 Earth-sun factor =  0.9735170
+step =   35 sza =    69.048 Earth-sun factor =  0.9735170
+step =   36 sza =    69.077 Earth-sun factor =  0.9735184
+step =   37 sza =    69.109 Earth-sun factor =  0.9735184
+step =   38 sza =    69.141 Earth-sun factor =  0.9735184
+step =   39 sza =    69.173 Earth-sun factor =  0.9735184
+step =   40 sza =    69.206 Earth-sun factor =  0.9735184
+step =   41 sza =    69.240 Earth-sun factor =  0.9735184
+step =   42 sza =    69.274 Earth-sun factor =  0.9735194
+step =   43 sza =    69.309 Earth-sun factor =  0.9735194
+step =   44 sza =    69.345 Earth-sun factor =  0.9735194
+step =   45 sza =    69.381 Earth-sun factor =  0.9735194
+step =   46 sza =    69.419 Earth-sun factor =  0.9735194
+step =   47 sza =    69.455 Earth-sun factor =  0.9735208
+step =   48 sza =    69.494 Earth-sun factor =  0.9735208
+step =   49 sza =    69.533 Earth-sun factor =  0.9735208
+step =   50 sza =    69.572 Earth-sun factor =  0.9735208
+step =   51 sza =    69.613 Earth-sun factor =  0.9735208
+step =   52 sza =    69.654 Earth-sun factor =  0.9735208
+step =   53 sza =    69.694 Earth-sun factor =  0.9735219
+step =   54 sza =    69.737 Earth-sun factor =  0.9735219
+step =   55 sza =    69.780 Earth-sun factor =  0.9735219
+step =   56 sza =    69.823 Earth-sun factor =  0.9735219
+step =   57 sza =    69.867 Earth-sun factor =  0.9735219
+step =   58 sza =    69.912 Earth-sun factor =  0.9735219
+step =   59 sza =    69.956 Earth-sun factor =  0.9735234
+step =   60 sza =    70.002 Earth-sun factor =  0.9735234
+step =   61 sza =    70.049 Earth-sun factor =  0.9735234
+ air temperature: USSA, 1976
+ air concentrations: USSA, 1976
+ ozone profile: USSA, 1976
+ DATAE1/SUN/susim_hi.flx
+ DATAE1/SUN/atlas3_1994_317_a.dat        
+ DATAE1/SUN/neckel.flx                   
+ DATAE1/SUN/sao2010.solref.converted     
+ aerosols:  Elterman (1968) continental profile
+step =    1 sza =    70.049 Earth-sun factor =  0.9735234
+step =    2 sza =    70.096 Earth-sun factor =  0.9735234
+step =    3 sza =    70.144 Earth-sun factor =  0.9735234
+step =    4 sza =    70.192 Earth-sun factor =  0.9735246
+step =    5 sza =    70.241 Earth-sun factor =  0.9735246
+step =    6 sza =    70.291 Earth-sun factor =  0.9735246
+step =    7 sza =    70.341 Earth-sun factor =  0.9735246
+step =    8 sza =    70.392 Earth-sun factor =  0.9735246
+step =    9 sza =    70.444 Earth-sun factor =  0.9735246
+step =   10 sza =    70.495 Earth-sun factor =  0.9735259
+step =   11 sza =    70.548 Earth-sun factor =  0.9735259
+step =   12 sza =    70.602 Earth-sun factor =  0.9735259
+step =   13 sza =    70.656 Earth-sun factor =  0.9735259
+step =   14 sza =    70.710 Earth-sun factor =  0.9735259
+step =   15 sza =    70.766 Earth-sun factor =  0.9735259
+step =   16 sza =    70.821 Earth-sun factor =  0.9735270
+step =   17 sza =    70.877 Earth-sun factor =  0.9735270
+step =   18 sza =    70.934 Earth-sun factor =  0.9735270
+step =   19 sza =    70.992 Earth-sun factor =  0.9735270
+step =   20 sza =    71.050 Earth-sun factor =  0.9735270
+step =   21 sza =    71.108 Earth-sun factor =  0.9735284
+step =   22 sza =    71.168 Earth-sun factor =  0.9735284
+step =   23 sza =    71.228 Earth-sun factor =  0.9735284
+step =   24 sza =    71.288 Earth-sun factor =  0.9735284
+step =   25 sza =    71.350 Earth-sun factor =  0.9735284
+step =   26 sza =    71.412 Earth-sun factor =  0.9735284
+step =   27 sza =    71.473 Earth-sun factor =  0.9735295
+step =   28 sza =    71.536 Earth-sun factor =  0.9735295
+step =   29 sza =    71.600 Earth-sun factor =  0.9735295
+step =   30 sza =    71.664 Earth-sun factor =  0.9735295
+step =   31 sza =    71.729 Earth-sun factor =  0.9735295
+step =   32 sza =    71.793 Earth-sun factor =  0.9735309
+step =   33 sza =    71.859 Earth-sun factor =  0.9735309
+step =   34 sza =    71.925 Earth-sun factor =  0.9735309
+step =   35 sza =    71.992 Earth-sun factor =  0.9735309
+step =   36 sza =    72.060 Earth-sun factor =  0.9735309
+step =   37 sza =    72.128 Earth-sun factor =  0.9735309
+step =   38 sza =    72.196 Earth-sun factor =  0.9735321
+step =   39 sza =    72.265 Earth-sun factor =  0.9735321
+step =   40 sza =    72.335 Earth-sun factor =  0.9735321
+step =   41 sza =    72.406 Earth-sun factor =  0.9735321
+step =   42 sza =    72.477 Earth-sun factor =  0.9735321
+step =   43 sza =    72.548 Earth-sun factor =  0.9735321
+step =   44 sza =    72.619 Earth-sun factor =  0.9735333
+step =   45 sza =    72.692 Earth-sun factor =  0.9735333
+step =   46 sza =    72.765 Earth-sun factor =  0.9735333
+step =   47 sza =    72.839 Earth-sun factor =  0.9735333
+step =   48 sza =    72.913 Earth-sun factor =  0.9735333
+step =   49 sza =    72.987 Earth-sun factor =  0.9735346
+step =   50 sza =    73.063 Earth-sun factor =  0.9735346
+step =   51 sza =    73.139 Earth-sun factor =  0.9735346
+step =   52 sza =    73.215 Earth-sun factor =  0.9735346
+step =   53 sza =    73.292 Earth-sun factor =  0.9735346
+step =   54 sza =    73.370 Earth-sun factor =  0.9735346
+step =   55 sza =    73.447 Earth-sun factor =  0.9735357
+step =   56 sza =    73.526 Earth-sun factor =  0.9735357
+step =   57 sza =    73.605 Earth-sun factor =  0.9735357
+step =   58 sza =    73.684 Earth-sun factor =  0.9735357
+step =   59 sza =    73.765 Earth-sun factor =  0.9735357
+step =   60 sza =    73.845 Earth-sun factor =  0.9735357
+step =   61 sza =    73.926 Earth-sun factor =  0.9735371
+ air temperature: USSA, 1976
+ air concentrations: USSA, 1976
+ ozone profile: USSA, 1976
+ DATAE1/SUN/susim_hi.flx
+ DATAE1/SUN/atlas3_1994_317_a.dat        
+ DATAE1/SUN/neckel.flx                   
+ DATAE1/SUN/sao2010.solref.converted     
+ aerosols:  Elterman (1968) continental profile
+step =    1 sza =    73.926 Earth-sun factor =  0.9735371
+step =    2 sza =    74.007 Earth-sun factor =  0.9735371
+step =    3 sza =    74.090 Earth-sun factor =  0.9735371
+step =    4 sza =    74.172 Earth-sun factor =  0.9735371
+step =    5 sza =    74.256 Earth-sun factor =  0.9735371
+step =    6 sza =    74.339 Earth-sun factor =  0.9735382
+step =    7 sza =    74.423 Earth-sun factor =  0.9735382
+step =    8 sza =    74.508 Earth-sun factor =  0.9735382
+step =    9 sza =    74.593 Earth-sun factor =  0.9735382
+step =   10 sza =    74.679 Earth-sun factor =  0.9735382
+step =   11 sza =    74.765 Earth-sun factor =  0.9735382
+step =   12 sza =    74.851 Earth-sun factor =  0.9735396
+step =   13 sza =    74.939 Earth-sun factor =  0.9735396
+step =   14 sza =    75.026 Earth-sun factor =  0.9735396
+step =   15 sza =    75.115 Earth-sun factor =  0.9735396
+step =   16 sza =    75.204 Earth-sun factor =  0.9735396
+step =   17 sza =    75.292 Earth-sun factor =  0.9735408
+step =   18 sza =    75.382 Earth-sun factor =  0.9735408
+step =   19 sza =    75.472 Earth-sun factor =  0.9735408
+step =   20 sza =    75.563 Earth-sun factor =  0.9735408
+step =   21 sza =    75.654 Earth-sun factor =  0.9735408
+step =   22 sza =    75.746 Earth-sun factor =  0.9735408
+step =   23 sza =    75.837 Earth-sun factor =  0.9735422
+step =   24 sza =    75.930 Earth-sun factor =  0.9735422
+step =   25 sza =    76.023 Earth-sun factor =  0.9735422
+step =   26 sza =    76.116 Earth-sun factor =  0.9735422
+step =   27 sza =    76.211 Earth-sun factor =  0.9735422
+step =   28 sza =    76.305 Earth-sun factor =  0.9735422
+step =   29 sza =    76.399 Earth-sun factor =  0.9735433
+step =   30 sza =    76.495 Earth-sun factor =  0.9735433
+step =   31 sza =    76.591 Earth-sun factor =  0.9735433
+step =   32 sza =    76.687 Earth-sun factor =  0.9735433
+step =   33 sza =    76.784 Earth-sun factor =  0.9735433
+step =   34 sza =    76.880 Earth-sun factor =  0.9735447
+step =   35 sza =    76.978 Earth-sun factor =  0.9735447
+step =   36 sza =    77.076 Earth-sun factor =  0.9735447
+step =   37 sza =    77.175 Earth-sun factor =  0.9735447
+step =   38 sza =    77.274 Earth-sun factor =  0.9735447
+step =   39 sza =    77.373 Earth-sun factor =  0.9735447
+step =   40 sza =    77.472 Earth-sun factor =  0.9735458
+step =   41 sza =    77.573 Earth-sun factor =  0.9735458
+step =   42 sza =    77.674 Earth-sun factor =  0.9735458
+step =   43 sza =    77.775 Earth-sun factor =  0.9735458
+step =   44 sza =    77.877 Earth-sun factor =  0.9735458
+step =   45 sza =    77.979 Earth-sun factor =  0.9735458
+step =   46 sza =    78.080 Earth-sun factor =  0.9735472
+step =   47 sza =    78.183 Earth-sun factor =  0.9735472
+step =   48 sza =    78.287 Earth-sun factor =  0.9735472
+step =   49 sza =    78.391 Earth-sun factor =  0.9735472
+step =   50 sza =    78.495 Earth-sun factor =  0.9735472
+step =   51 sza =    78.598 Earth-sun factor =  0.9735484
+step =   52 sza =    78.704 Earth-sun factor =  0.9735484
+step =   53 sza =    78.809 Earth-sun factor =  0.9735484
+step =   54 sza =    78.915 Earth-sun factor =  0.9735484
+step =   55 sza =    79.021 Earth-sun factor =  0.9735484
+step =   56 sza =    79.128 Earth-sun factor =  0.9735484
+step =   57 sza =    79.234 Earth-sun factor =  0.9735497
+step =   58 sza =    79.342 Earth-sun factor =  0.9735497
+step =   59 sza =    79.450 Earth-sun factor =  0.9735497
+step =   60 sza =    79.558 Earth-sun factor =  0.9735497
+step =   61 sza =    79.667 Earth-sun factor =  0.9735497
+ air temperature: USSA, 1976
+ air concentrations: USSA, 1976
+ ozone profile: USSA, 1976
+ DATAE1/SUN/susim_hi.flx
+ DATAE1/SUN/atlas3_1994_317_a.dat        
+ DATAE1/SUN/neckel.flx                   
+ DATAE1/SUN/sao2010.solref.converted     
+ aerosols:  Elterman (1968) continental profile
+step =    1 sza =    79.667 Earth-sun factor =  0.9735497
+step =    2 sza =    79.775 Earth-sun factor =  0.9735509
+step =    3 sza =    79.884 Earth-sun factor =  0.9735509
+step =    4 sza =    79.994 Earth-sun factor =  0.9735509
+step =    5 sza =    80.105 Earth-sun factor =  0.9735509
+step =    6 sza =    80.215 Earth-sun factor =  0.9735509
+step =    7 sza =    80.326 Earth-sun factor =  0.9735509
+step =    8 sza =    80.437 Earth-sun factor =  0.9735522
+step =    9 sza =    80.549 Earth-sun factor =  0.9735522
+step =   10 sza =    80.661 Earth-sun factor =  0.9735522
+step =   11 sza =    80.773 Earth-sun factor =  0.9735522
+step =   12 sza =    80.886 Earth-sun factor =  0.9735522
+step =   13 sza =    81.000 Earth-sun factor =  0.9735522
+step =   14 sza =    81.112 Earth-sun factor =  0.9735534
+step =   15 sza =    81.226 Earth-sun factor =  0.9735534
+step =   16 sza =    81.341 Earth-sun factor =  0.9735534
+step =   17 sza =    81.455 Earth-sun factor =  0.9735534
+step =   18 sza =    81.571 Earth-sun factor =  0.9735534
+step =   19 sza =    81.685 Earth-sun factor =  0.9735547
+step =   20 sza =    81.801 Earth-sun factor =  0.9735547
+step =   21 sza =    81.917 Earth-sun factor =  0.9735547
+step =   22 sza =    82.034 Earth-sun factor =  0.9735547
+step =   23 sza =    82.151 Earth-sun factor =  0.9735547
+step =   24 sza =    82.268 Earth-sun factor =  0.9735547
+step =   25 sza =    82.385 Earth-sun factor =  0.9735559
+step =   26 sza =    82.502 Earth-sun factor =  0.9735559
+step =   27 sza =    82.621 Earth-sun factor =  0.9735559
+step =   28 sza =    82.739 Earth-sun factor =  0.9735559
+step =   29 sza =    82.858 Earth-sun factor =  0.9735559
+step =   30 sza =    82.978 Earth-sun factor =  0.9735559
+step =   31 sza =    83.096 Earth-sun factor =  0.9735574
+step =   32 sza =    83.216 Earth-sun factor =  0.9735574
+step =   33 sza =    83.337 Earth-sun factor =  0.9735574
+step =   34 sza =    83.457 Earth-sun factor =  0.9735574
+step =   35 sza =    83.578 Earth-sun factor =  0.9735574
+step =   36 sza =    83.699 Earth-sun factor =  0.9735584
+step =   37 sza =    83.820 Earth-sun factor =  0.9735584
+step =   38 sza =    83.942 Earth-sun factor =  0.9735584
+step =   39 sza =    84.064 Earth-sun factor =  0.9735584
+step =   40 sza =    84.187 Earth-sun factor =  0.9735584
+step =   41 sza =    84.310 Earth-sun factor =  0.9735584
+step =   42 sza =    84.432 Earth-sun factor =  0.9735598
+step =   43 sza =    84.555 Earth-sun factor =  0.9735598
+step =   44 sza =    84.679 Earth-sun factor =  0.9735598
+step =   45 sza =    84.803 Earth-sun factor =  0.9735598
+step =   46 sza =    84.928 Earth-sun factor =  0.9735598
+step =   47 sza =    85.051 Earth-sun factor =  0.9735609
+step =   48 sza =    85.176 Earth-sun factor =  0.9735609
+step =   49 sza =    85.302 Earth-sun factor =  0.9735609
+step =   50 sza =    85.427 Earth-sun factor =  0.9735609
+step =   51 sza =    85.553 Earth-sun factor =  0.9735609
+step =   52 sza =    85.679 Earth-sun factor =  0.9735609
+step =   53 sza =    85.805 Earth-sun factor =  0.9735623
+step =   54 sza =    85.932 Earth-sun factor =  0.9735623
+step =   55 sza =    86.059 Earth-sun factor =  0.9735623
+step =   56 sza =    86.186 Earth-sun factor =  0.9735623
+step =   57 sza =    86.314 Earth-sun factor =  0.9735623
+step =   58 sza =    86.442 Earth-sun factor =  0.9735623
+step =   59 sza =    86.569 Earth-sun factor =  0.9735634
+step =   60 sza =    86.697 Earth-sun factor =  0.9735634
+step =   61 sza =    86.826 Earth-sun factor =  0.9735634
+ air temperature: USSA, 1976
+ air concentrations: USSA, 1976
+ ozone profile: USSA, 1976
+ DATAE1/SUN/susim_hi.flx
+ DATAE1/SUN/atlas3_1994_317_a.dat        
+ DATAE1/SUN/neckel.flx                   
+ DATAE1/SUN/sao2010.solref.converted     
+ aerosols:  Elterman (1968) continental profile
+step =    1 sza =    86.826 Earth-sun factor =  0.9735634
+step =    2 sza =    86.955 Earth-sun factor =  0.9735634
+step =    3 sza =    87.084 Earth-sun factor =  0.9735634
+step =    4 sza =    87.213 Earth-sun factor =  0.9735646
+step =    5 sza =    87.343 Earth-sun factor =  0.9735646
+step =    6 sza =    87.473 Earth-sun factor =  0.9735646
+step =    7 sza =    87.603 Earth-sun factor =  0.9735646
+step =    8 sza =    87.734 Earth-sun factor =  0.9735646
+step =    9 sza =    87.865 Earth-sun factor =  0.9735646
+step =   10 sza =    87.995 Earth-sun factor =  0.9735660
+step =   11 sza =    88.126 Earth-sun factor =  0.9735660
+step =   12 sza =    88.258 Earth-sun factor =  0.9735660
+step =   13 sza =    88.390 Earth-sun factor =  0.9735660
+step =   14 sza =    88.522 Earth-sun factor =  0.9735660
+step =   15 sza =    88.654 Earth-sun factor =  0.9735660
+step =   16 sza =    88.786 Earth-sun factor =  0.9735671
+step =   17 sza =    88.919 Earth-sun factor =  0.9735671
+step =   18 sza =    89.052 Earth-sun factor =  0.9735671
+step =   19 sza =    89.185 Earth-sun factor =  0.9735671
+step =   20 sza =    89.319 Earth-sun factor =  0.9735671
+step =   21 sza =    89.452 Earth-sun factor =  0.9735685
+step =   22 sza =    89.586 Earth-sun factor =  0.9735685
+step =   23 sza =    89.720 Earth-sun factor =  0.9735685
+step =   24 sza =    89.855 Earth-sun factor =  0.9735685
+step =   25 sza =    89.990 Earth-sun factor =  0.9735685
+step =   26 sza =    90.125 Earth-sun factor =  0.9735685
+step =   27 sza =    90.259 Earth-sun factor =  0.9735696
+step =   28 sza =    90.394 Earth-sun factor =  0.9735696
+step =   29 sza =    90.530 Earth-sun factor =  0.9735696
+step =   30 sza =    90.666 Earth-sun factor =  0.9735696
+step =   31 sza =    90.802 Earth-sun factor =  0.9735696
+step =   32 sza =    90.937 Earth-sun factor =  0.9735710
+step =   33 sza =    91.074 Earth-sun factor =  0.9735710
+step =   34 sza =    91.211 Earth-sun factor =  0.9735710
+step =   35 sza =    91.348 Earth-sun factor =  0.9735710
+step =   36 sza =    91.485 Earth-sun factor =  0.9735710
+step =   37 sza =    91.622 Earth-sun factor =  0.9735710
+step =   38 sza =    91.759 Earth-sun factor =  0.9735721
+step =   39 sza =    91.897 Earth-sun factor =  0.9735721
+step =   40 sza =    92.035 Earth-sun factor =  0.9735721
+step =   41 sza =    92.173 Earth-sun factor =  0.9735721
+step =   42 sza =    92.311 Earth-sun factor =  0.9735721
+step =   43 sza =    92.450 Earth-sun factor =  0.9735721
+step =   44 sza =    92.588 Earth-sun factor =  0.9735735
+step =   45 sza =    92.727 Earth-sun factor =  0.9735735
+step =   46 sza =    92.866 Earth-sun factor =  0.9735735
+step =   47 sza =    93.006 Earth-sun factor =  0.9735735
+step =   48 sza =    93.145 Earth-sun factor =  0.9735735
+step =   49 sza =    93.284 Earth-sun factor =  0.9735747
+step =   50 sza =    93.424 Earth-sun factor =  0.9735747
+step =   51 sza =    93.564 Earth-sun factor =  0.9735747
+step =   52 sza =    93.704 Earth-sun factor =  0.9735747
+step =   53 sza =    93.845 Earth-sun factor =  0.9735747
+step =   54 sza =    93.985 Earth-sun factor =  0.9735747
+step =   55 sza =    94.125 Earth-sun factor =  0.9735761
+step =   56 sza =    94.266 Earth-sun factor =  0.9735761
+step =   57 sza =    94.408 Earth-sun factor =  0.9735761
+step =   58 sza =    94.549 Earth-sun factor =  0.9735761
+step =   59 sza =    94.691 Earth-sun factor =  0.9735761
+step =   60 sza =    94.832 Earth-sun factor =  0.9735761
+step =   61 sza =    94.973 Earth-sun factor =  0.9735772
+ air temperature: USSA, 1976
+ air concentrations: USSA, 1976
+ ozone profile: USSA, 1976
+ DATAE1/SUN/susim_hi.flx
+ DATAE1/SUN/atlas3_1994_317_a.dat        
+ DATAE1/SUN/neckel.flx                   
+ DATAE1/SUN/sao2010.solref.converted     
+ aerosols:  Elterman (1968) continental profile
+step =    1 sza =    49.500 Earth-sun factor =  1.0303391
+step =    2 sza =    49.370 Earth-sun factor =  1.0303379
+step =    3 sza =    49.240 Earth-sun factor =  1.0303379
+step =    4 sza =    49.109 Earth-sun factor =  1.0303379
+step =    5 sza =    48.979 Earth-sun factor =  1.0303379
+step =    6 sza =    48.849 Earth-sun factor =  1.0303379
+step =    7 sza =    48.720 Earth-sun factor =  1.0303379
+step =    8 sza =    48.592 Earth-sun factor =  1.0303367
+step =    9 sza =    48.463 Earth-sun factor =  1.0303367
+step =   10 sza =    48.335 Earth-sun factor =  1.0303367
+step =   11 sza =    48.207 Earth-sun factor =  1.0303367
+step =   12 sza =    48.080 Earth-sun factor =  1.0303367
+step =   13 sza =    47.953 Earth-sun factor =  1.0303367
+step =   14 sza =    47.827 Earth-sun factor =  1.0303357
+step =   15 sza =    47.700 Earth-sun factor =  1.0303357
+step =   16 sza =    47.574 Earth-sun factor =  1.0303357
+step =   17 sza =    47.449 Earth-sun factor =  1.0303357
+step =   18 sza =    47.324 Earth-sun factor =  1.0303357
+step =   19 sza =    47.200 Earth-sun factor =  1.0303346
+step =   20 sza =    47.075 Earth-sun factor =  1.0303346
+step =   21 sza =    46.951 Earth-sun factor =  1.0303346
+step =   22 sza =    46.828 Earth-sun factor =  1.0303346
+step =   23 sza =    46.704 Earth-sun factor =  1.0303346
+step =   24 sza =    46.582 Earth-sun factor =  1.0303346
+step =   25 sza =    46.460 Earth-sun factor =  1.0303335
+step =   26 sza =    46.338 Earth-sun factor =  1.0303335
+step =   27 sza =    46.217 Earth-sun factor =  1.0303335
+step =   28 sza =    46.096 Earth-sun factor =  1.0303335
+step =   29 sza =    45.975 Earth-sun factor =  1.0303335
+step =   30 sza =    45.855 Earth-sun factor =  1.0303335
+step =   31 sza =    45.736 Earth-sun factor =  1.0303324
+step =   32 sza =    45.617 Earth-sun factor =  1.0303324
+step =   33 sza =    45.498 Earth-sun factor =  1.0303324
+step =   34 sza =    45.380 Earth-sun factor =  1.0303324
+step =   35 sza =    45.262 Earth-sun factor =  1.0303324
+step =   36 sza =    45.146 Earth-sun factor =  1.0303314
+step =   37 sza =    45.029 Earth-sun factor =  1.0303314
+step =   38 sza =    44.912 Earth-sun factor =  1.0303314
+step =   39 sza =    44.797 Earth-sun factor =  1.0303314
+step =   40 sza =    44.681 Earth-sun factor =  1.0303314
+step =   41 sza =    44.566 Earth-sun factor =  1.0303314
+step =   42 sza =    44.453 Earth-sun factor =  1.0303302
+step =   43 sza =    44.339 Earth-sun factor =  1.0303302
+step =   44 sza =    44.225 Earth-sun factor =  1.0303302
+step =   45 sza =    44.112 Earth-sun factor =  1.0303302
+step =   46 sza =    44.000 Earth-sun factor =  1.0303302
+step =   47 sza =    43.889 Earth-sun factor =  1.0303291
+step =   48 sza =    43.778 Earth-sun factor =  1.0303291
+step =   49 sza =    43.667 Earth-sun factor =  1.0303291
+step =   50 sza =    43.557 Earth-sun factor =  1.0303291
+step =   51 sza =    43.447 Earth-sun factor =  1.0303291
+step =   52 sza =    43.338 Earth-sun factor =  1.0303291
+step =   53 sza =    43.230 Earth-sun factor =  1.0303279
+step =   54 sza =    43.122 Earth-sun factor =  1.0303279
+step =   55 sza =    43.015 Earth-sun factor =  1.0303279
+step =   56 sza =    42.908 Earth-sun factor =  1.0303279
+step =   57 sza =    42.802 Earth-sun factor =  1.0303279
+step =   58 sza =    42.696 Earth-sun factor =  1.0303279
+step =   59 sza =    42.592 Earth-sun factor =  1.0303270
+step =   60 sza =    42.487 Earth-sun factor =  1.0303270
+step =   61 sza =    42.383 Earth-sun factor =  1.0303270
+ air temperature: USSA, 1976
+ air concentrations: USSA, 1976
+ ozone profile: USSA, 1976
+ DATAE1/SUN/susim_hi.flx
+ DATAE1/SUN/atlas3_1994_317_a.dat        
+ DATAE1/SUN/neckel.flx                   
+ DATAE1/SUN/sao2010.solref.converted     
+ aerosols:  Elterman (1968) continental profile
+step =    1 sza =    42.383 Earth-sun factor =  1.0303270
+step =    2 sza =    42.280 Earth-sun factor =  1.0303270
+step =    3 sza =    42.177 Earth-sun factor =  1.0303270
+step =    4 sza =    42.076 Earth-sun factor =  1.0303259
+step =    5 sza =    41.975 Earth-sun factor =  1.0303259
+step =    6 sza =    41.874 Earth-sun factor =  1.0303259
+step =    7 sza =    41.773 Earth-sun factor =  1.0303259
+step =    8 sza =    41.674 Earth-sun factor =  1.0303259
+step =    9 sza =    41.575 Earth-sun factor =  1.0303259
+step =   10 sza =    41.477 Earth-sun factor =  1.0303247
+step =   11 sza =    41.380 Earth-sun factor =  1.0303247
+step =   12 sza =    41.283 Earth-sun factor =  1.0303247
+step =   13 sza =    41.186 Earth-sun factor =  1.0303247
+step =   14 sza =    41.091 Earth-sun factor =  1.0303247
+step =   15 sza =    40.996 Earth-sun factor =  1.0303247
+step =   16 sza =    40.902 Earth-sun factor =  1.0303235
+step =   17 sza =    40.809 Earth-sun factor =  1.0303235
+step =   18 sza =    40.716 Earth-sun factor =  1.0303235
+step =   19 sza =    40.623 Earth-sun factor =  1.0303235
+step =   20 sza =    40.532 Earth-sun factor =  1.0303235
+step =   21 sza =    40.442 Earth-sun factor =  1.0303224
+step =   22 sza =    40.352 Earth-sun factor =  1.0303224
+step =   23 sza =    40.262 Earth-sun factor =  1.0303224
+step =   24 sza =    40.173 Earth-sun factor =  1.0303224
+step =   25 sza =    40.085 Earth-sun factor =  1.0303224
+step =   26 sza =    39.998 Earth-sun factor =  1.0303224
+step =   27 sza =    39.912 Earth-sun factor =  1.0303215
+step =   28 sza =    39.827 Earth-sun factor =  1.0303215
+step =   29 sza =    39.742 Earth-sun factor =  1.0303215
+step =   30 sza =    39.657 Earth-sun factor =  1.0303215
+step =   31 sza =    39.574 Earth-sun factor =  1.0303215
+step =   32 sza =    39.492 Earth-sun factor =  1.0303203
+step =   33 sza =    39.410 Earth-sun factor =  1.0303203
+step =   34 sza =    39.329 Earth-sun factor =  1.0303203
+step =   35 sza =    39.248 Earth-sun factor =  1.0303203
+step =   36 sza =    39.168 Earth-sun factor =  1.0303203
+step =   37 sza =    39.089 Earth-sun factor =  1.0303203
+step =   38 sza =    39.012 Earth-sun factor =  1.0303192
+step =   39 sza =    38.935 Earth-sun factor =  1.0303192
+step =   40 sza =    38.859 Earth-sun factor =  1.0303192
+step =   41 sza =    38.783 Earth-sun factor =  1.0303192
+step =   42 sza =    38.708 Earth-sun factor =  1.0303192
+step =   43 sza =    38.634 Earth-sun factor =  1.0303192
+step =   44 sza =    38.562 Earth-sun factor =  1.0303181
+step =   45 sza =    38.489 Earth-sun factor =  1.0303181
+step =   46 sza =    38.418 Earth-sun factor =  1.0303181
+step =   47 sza =    38.347 Earth-sun factor =  1.0303181
+step =   48 sza =    38.277 Earth-sun factor =  1.0303181
+step =   49 sza =    38.209 Earth-sun factor =  1.0303169
+step =   50 sza =    38.141 Earth-sun factor =  1.0303169
+step =   51 sza =    38.074 Earth-sun factor =  1.0303169
+step =   52 sza =    38.008 Earth-sun factor =  1.0303169
+step =   53 sza =    37.942 Earth-sun factor =  1.0303169
+step =   54 sza =    37.877 Earth-sun factor =  1.0303169
+step =   55 sza =    37.815 Earth-sun factor =  1.0303159
+step =   56 sza =    37.752 Earth-sun factor =  1.0303159
+step =   57 sza =    37.690 Earth-sun factor =  1.0303159
+step =   58 sza =    37.629 Earth-sun factor =  1.0303159
+step =   59 sza =    37.569 Earth-sun factor =  1.0303159
+step =   60 sza =    37.509 Earth-sun factor =  1.0303159
+step =   61 sza =    37.452 Earth-sun factor =  1.0303149
+ air temperature: USSA, 1976
+ air concentrations: USSA, 1976
+ ozone profile: USSA, 1976
+ DATAE1/SUN/susim_hi.flx
+ DATAE1/SUN/atlas3_1994_317_a.dat        
+ DATAE1/SUN/neckel.flx                   
+ DATAE1/SUN/sao2010.solref.converted     
+ aerosols:  Elterman (1968) continental profile
+step =    1 sza =    37.452 Earth-sun factor =  1.0303149
+step =    2 sza =    37.395 Earth-sun factor =  1.0303149
+step =    3 sza =    37.338 Earth-sun factor =  1.0303149
+step =    4 sza =    37.283 Earth-sun factor =  1.0303149
+step =    5 sza =    37.228 Earth-sun factor =  1.0303149
+step =    6 sza =    37.175 Earth-sun factor =  1.0303137
+step =    7 sza =    37.122 Earth-sun factor =  1.0303137
+step =    8 sza =    37.071 Earth-sun factor =  1.0303137
+step =    9 sza =    37.020 Earth-sun factor =  1.0303137
+step =   10 sza =    36.970 Earth-sun factor =  1.0303137
+step =   11 sza =    36.921 Earth-sun factor =  1.0303137
+step =   12 sza =    36.874 Earth-sun factor =  1.0303127
+step =   13 sza =    36.827 Earth-sun factor =  1.0303127
+step =   14 sza =    36.781 Earth-sun factor =  1.0303127
+step =   15 sza =    36.736 Earth-sun factor =  1.0303127
+step =   16 sza =    36.692 Earth-sun factor =  1.0303127
+step =   17 sza =    36.650 Earth-sun factor =  1.0303115
+step =   18 sza =    36.607 Earth-sun factor =  1.0303115
+step =   19 sza =    36.566 Earth-sun factor =  1.0303115
+step =   20 sza =    36.526 Earth-sun factor =  1.0303115
+step =   21 sza =    36.487 Earth-sun factor =  1.0303115
+step =   22 sza =    36.449 Earth-sun factor =  1.0303115
+step =   23 sza =    36.413 Earth-sun factor =  1.0303104
+step =   24 sza =    36.376 Earth-sun factor =  1.0303104
+step =   25 sza =    36.341 Earth-sun factor =  1.0303104
+step =   26 sza =    36.307 Earth-sun factor =  1.0303104
+step =   27 sza =    36.274 Earth-sun factor =  1.0303104
+step =   28 sza =    36.242 Earth-sun factor =  1.0303104
+step =   29 sza =    36.212 Earth-sun factor =  1.0303093
+step =   30 sza =    36.182 Earth-sun factor =  1.0303093
+step =   31 sza =    36.153 Earth-sun factor =  1.0303093
+step =   32 sza =    36.125 Earth-sun factor =  1.0303093
+step =   33 sza =    36.098 Earth-sun factor =  1.0303093
+step =   34 sza =    36.073 Earth-sun factor =  1.0303082
+step =   35 sza =    36.048 Earth-sun factor =  1.0303082
+step =   36 sza =    36.024 Earth-sun factor =  1.0303082
+step =   37 sza =    36.002 Earth-sun factor =  1.0303082
+step =   38 sza =    35.980 Earth-sun factor =  1.0303082
+step =   39 sza =    35.959 Earth-sun factor =  1.0303082
+step =   40 sza =    35.941 Earth-sun factor =  1.0303071
+step =   41 sza =    35.922 Earth-sun factor =  1.0303071
+step =   42 sza =    35.904 Earth-sun factor =  1.0303071
+step =   43 sza =    35.888 Earth-sun factor =  1.0303071
+step =   44 sza =    35.873 Earth-sun factor =  1.0303071
+step =   45 sza =    35.858 Earth-sun factor =  1.0303071
+step =   46 sza =    35.846 Earth-sun factor =  1.0303060
+step =   47 sza =    35.834 Earth-sun factor =  1.0303060
+step =   48 sza =    35.822 Earth-sun factor =  1.0303060
+step =   49 sza =    35.812 Earth-sun factor =  1.0303060
+step =   50 sza =    35.803 Earth-sun factor =  1.0303060
+step =   51 sza =    35.796 Earth-sun factor =  1.0303049
+step =   52 sza =    35.789 Earth-sun factor =  1.0303049
+step =   53 sza =    35.783 Earth-sun factor =  1.0303049
+step =   54 sza =    35.779 Earth-sun factor =  1.0303049
+step =   55 sza =    35.775 Earth-sun factor =  1.0303049
+step =   56 sza =    35.772 Earth-sun factor =  1.0303049
+step =   57 sza =    35.772 Earth-sun factor =  1.0303037
+step =   58 sza =    35.771 Earth-sun factor =  1.0303037
+step =   59 sza =    35.772 Earth-sun factor =  1.0303037
+step =   60 sza =    35.773 Earth-sun factor =  1.0303037
+step =   61 sza =    35.776 Earth-sun factor =  1.0303037
+ air temperature: USSA, 1976
+ air concentrations: USSA, 1976
+ ozone profile: USSA, 1976
+ DATAE1/SUN/susim_hi.flx
+ DATAE1/SUN/atlas3_1994_317_a.dat        
+ DATAE1/SUN/neckel.flx                   
+ DATAE1/SUN/sao2010.solref.converted     
+ aerosols:  Elterman (1968) continental profile
+step =    1 sza =    35.776 Earth-sun factor =  1.0303037
+step =    2 sza =    35.781 Earth-sun factor =  1.0303026
+step =    3 sza =    35.786 Earth-sun factor =  1.0303026
+step =    4 sza =    35.791 Earth-sun factor =  1.0303026
+step =    5 sza =    35.798 Earth-sun factor =  1.0303026
+step =    6 sza =    35.806 Earth-sun factor =  1.0303026
+step =    7 sza =    35.815 Earth-sun factor =  1.0303026
+step =    8 sza =    35.827 Earth-sun factor =  1.0303017
+step =    9 sza =    35.838 Earth-sun factor =  1.0303017
+step =   10 sza =    35.850 Earth-sun factor =  1.0303017
+step =   11 sza =    35.863 Earth-sun factor =  1.0303017
+step =   12 sza =    35.878 Earth-sun factor =  1.0303017
+step =   13 sza =    35.893 Earth-sun factor =  1.0303017
+step =   14 sza =    35.911 Earth-sun factor =  1.0303005
+step =   15 sza =    35.928 Earth-sun factor =  1.0303005
+step =   16 sza =    35.947 Earth-sun factor =  1.0303005
+step =   17 sza =    35.966 Earth-sun factor =  1.0303005
+step =   18 sza =    35.987 Earth-sun factor =  1.0303005
+step =   19 sza =    36.010 Earth-sun factor =  1.0302994
+step =   20 sza =    36.033 Earth-sun factor =  1.0302994
+step =   21 sza =    36.056 Earth-sun factor =  1.0302994
+step =   22 sza =    36.081 Earth-sun factor =  1.0302994
+step =   23 sza =    36.107 Earth-sun factor =  1.0302994
+step =   24 sza =    36.134 Earth-sun factor =  1.0302994
+step =   25 sza =    36.163 Earth-sun factor =  1.0302982
+step =   26 sza =    36.192 Earth-sun factor =  1.0302982
+step =   27 sza =    36.222 Earth-sun factor =  1.0302982
+step =   28 sza =    36.253 Earth-sun factor =  1.0302982
+step =   29 sza =    36.285 Earth-sun factor =  1.0302982
+step =   30 sza =    36.318 Earth-sun factor =  1.0302982
+step =   31 sza =    36.353 Earth-sun factor =  1.0302972
+step =   32 sza =    36.389 Earth-sun factor =  1.0302972
+step =   33 sza =    36.425 Earth-sun factor =  1.0302972
+step =   34 sza =    36.462 Earth-sun factor =  1.0302972
+step =   35 sza =    36.500 Earth-sun factor =  1.0302972
+step =   36 sza =    36.540 Earth-sun factor =  1.0302961
+step =   37 sza =    36.580 Earth-sun factor =  1.0302961
+step =   38 sza =    36.621 Earth-sun factor =  1.0302961
+step =   39 sza =    36.664 Earth-sun factor =  1.0302961
+step =   40 sza =    36.707 Earth-sun factor =  1.0302961
+step =   41 sza =    36.751 Earth-sun factor =  1.0302961
+step =   42 sza =    36.797 Earth-sun factor =  1.0302949
+step =   43 sza =    36.843 Earth-sun factor =  1.0302949
+step =   44 sza =    36.890 Earth-sun factor =  1.0302949
+step =   45 sza =    36.938 Earth-sun factor =  1.0302949
+step =   46 sza =    36.987 Earth-sun factor =  1.0302949
+step =   47 sza =    37.038 Earth-sun factor =  1.0302939
+step =   48 sza =    37.089 Earth-sun factor =  1.0302939
+step =   49 sza =    37.140 Earth-sun factor =  1.0302939
+step =   50 sza =    37.193 Earth-sun factor =  1.0302939
+step =   51 sza =    37.247 Earth-sun factor =  1.0302939
+step =   52 sza =    37.301 Earth-sun factor =  1.0302939
+step =   53 sza =    37.358 Earth-sun factor =  1.0302929
+step =   54 sza =    37.414 Earth-sun factor =  1.0302929
+step =   55 sza =    37.472 Earth-sun factor =  1.0302929
+step =   56 sza =    37.530 Earth-sun factor =  1.0302929
+step =   57 sza =    37.589 Earth-sun factor =  1.0302929
+step =   58 sza =    37.649 Earth-sun factor =  1.0302929
+step =   59 sza =    37.712 Earth-sun factor =  1.0302917
+step =   60 sza =    37.773 Earth-sun factor =  1.0302917
+step =   61 sza =    37.836 Earth-sun factor =  1.0302917
+ air temperature: USSA, 1976
+ air concentrations: USSA, 1976
+ ozone profile: USSA, 1976
+ DATAE1/SUN/susim_hi.flx
+ DATAE1/SUN/atlas3_1994_317_a.dat        
+ DATAE1/SUN/neckel.flx                   
+ DATAE1/SUN/sao2010.solref.converted     
+ aerosols:  Elterman (1968) continental profile
+step =    1 sza =    37.836 Earth-sun factor =  1.0302917
+step =    2 sza =    37.900 Earth-sun factor =  1.0302917
+step =    3 sza =    37.965 Earth-sun factor =  1.0302917
+step =    4 sza =    38.031 Earth-sun factor =  1.0302905
+step =    5 sza =    38.098 Earth-sun factor =  1.0302905
+step =    6 sza =    38.165 Earth-sun factor =  1.0302905
+step =    7 sza =    38.233 Earth-sun factor =  1.0302905
+step =    8 sza =    38.302 Earth-sun factor =  1.0302905
+step =    9 sza =    38.372 Earth-sun factor =  1.0302905
+step =   10 sza =    38.443 Earth-sun factor =  1.0302894
+step =   11 sza =    38.515 Earth-sun factor =  1.0302894
+step =   12 sza =    38.587 Earth-sun factor =  1.0302894
+step =   13 sza =    38.660 Earth-sun factor =  1.0302894
+step =   14 sza =    38.734 Earth-sun factor =  1.0302894
+step =   15 sza =    38.809 Earth-sun factor =  1.0302894
+step =   16 sza =    38.886 Earth-sun factor =  1.0302883
+step =   17 sza =    38.962 Earth-sun factor =  1.0302883
+step =   18 sza =    39.039 Earth-sun factor =  1.0302883
+step =   19 sza =    39.117 Earth-sun factor =  1.0302883
+step =   20 sza =    39.196 Earth-sun factor =  1.0302883
+step =   21 sza =    39.277 Earth-sun factor =  1.0302873
+step =   22 sza =    39.357 Earth-sun factor =  1.0302873
+step =   23 sza =    39.439 Earth-sun factor =  1.0302873
+step =   24 sza =    39.521 Earth-sun factor =  1.0302873
+step =   25 sza =    39.603 Earth-sun factor =  1.0302873
+step =   26 sza =    39.687 Earth-sun factor =  1.0302873
+step =   27 sza =    39.772 Earth-sun factor =  1.0302862
+step =   28 sza =    39.857 Earth-sun factor =  1.0302862
+step =   29 sza =    39.943 Earth-sun factor =  1.0302862
+step =   30 sza =    40.029 Earth-sun factor =  1.0302862
+step =   31 sza =    40.117 Earth-sun factor =  1.0302862
+step =   32 sza =    40.206 Earth-sun factor =  1.0302851
+step =   33 sza =    40.294 Earth-sun factor =  1.0302851
+step =   34 sza =    40.384 Earth-sun factor =  1.0302851
+step =   35 sza =    40.474 Earth-sun factor =  1.0302851
+step =   36 sza =    40.565 Earth-sun factor =  1.0302851
+step =   37 sza =    40.656 Earth-sun factor =  1.0302851
+step =   38 sza =    40.749 Earth-sun factor =  1.0302839
+step =   39 sza =    40.842 Earth-sun factor =  1.0302839
+step =   40 sza =    40.936 Earth-sun factor =  1.0302839
+step =   41 sza =    41.030 Earth-sun factor =  1.0302839
+step =   42 sza =    41.125 Earth-sun factor =  1.0302839
+step =   43 sza =    41.221 Earth-sun factor =  1.0302839
+step =   44 sza =    41.318 Earth-sun factor =  1.0302829
+step =   45 sza =    41.415 Earth-sun factor =  1.0302829
+step =   46 sza =    41.513 Earth-sun factor =  1.0302829
+step =   47 sza =    41.611 Earth-sun factor =  1.0302829
+step =   48 sza =    41.710 Earth-sun factor =  1.0302829
+step =   49 sza =    41.811 Earth-sun factor =  1.0302817
+step =   50 sza =    41.911 Earth-sun factor =  1.0302817
+step =   51 sza =    42.012 Earth-sun factor =  1.0302817
+step =   52 sza =    42.113 Earth-sun factor =  1.0302817
+step =   53 sza =    42.215 Earth-sun factor =  1.0302817
+step =   54 sza =    42.318 Earth-sun factor =  1.0302817
+step =   55 sza =    42.422 Earth-sun factor =  1.0302806
+step =   56 sza =    42.526 Earth-sun factor =  1.0302806
+step =   57 sza =    42.630 Earth-sun factor =  1.0302806
+step =   58 sza =    42.736 Earth-sun factor =  1.0302806
+step =   59 sza =    42.841 Earth-sun factor =  1.0302806
+step =   60 sza =    42.947 Earth-sun factor =  1.0302806
+step =   61 sza =    43.055 Earth-sun factor =  1.0302795
+ air temperature: USSA, 1976
+ air concentrations: USSA, 1976
+ ozone profile: USSA, 1976
+ DATAE1/SUN/susim_hi.flx
+ DATAE1/SUN/atlas3_1994_317_a.dat        
+ DATAE1/SUN/neckel.flx                   
+ DATAE1/SUN/sao2010.solref.converted     
+ aerosols:  Elterman (1968) continental profile
+step =    1 sza =    43.055 Earth-sun factor =  1.0302795
+step =    2 sza =    43.163 Earth-sun factor =  1.0302795
+step =    3 sza =    43.271 Earth-sun factor =  1.0302795
+step =    4 sza =    43.379 Earth-sun factor =  1.0302795
+step =    5 sza =    43.488 Earth-sun factor =  1.0302795
+step =    6 sza =    43.599 Earth-sun factor =  1.0302784
+step =    7 sza =    43.709 Earth-sun factor =  1.0302784
+step =    8 sza =    43.820 Earth-sun factor =  1.0302784
+step =    9 sza =    43.931 Earth-sun factor =  1.0302784
+step =   10 sza =    44.043 Earth-sun factor =  1.0302784
+step =   11 sza =    44.155 Earth-sun factor =  1.0302784
+step =   12 sza =    44.269 Earth-sun factor =  1.0302773
+step =   13 sza =    44.382 Earth-sun factor =  1.0302773
+step =   14 sza =    44.496 Earth-sun factor =  1.0302773
+step =   15 sza =    44.610 Earth-sun factor =  1.0302773
+step =   16 sza =    44.725 Earth-sun factor =  1.0302773
+step =   17 sza =    44.841 Earth-sun factor =  1.0302762
+step =   18 sza =    44.957 Earth-sun factor =  1.0302762
+step =   19 sza =    45.074 Earth-sun factor =  1.0302762
+step =   20 sza =    45.190 Earth-sun factor =  1.0302762
+step =   21 sza =    45.308 Earth-sun factor =  1.0302762
+step =   22 sza =    45.426 Earth-sun factor =  1.0302762
+step =   23 sza =    45.545 Earth-sun factor =  1.0302751
+step =   24 sza =    45.663 Earth-sun factor =  1.0302751
+step =   25 sza =    45.783 Earth-sun factor =  1.0302751
+step =   26 sza =    45.902 Earth-sun factor =  1.0302751
+step =   27 sza =    46.022 Earth-sun factor =  1.0302751
+step =   28 sza =    46.143 Earth-sun factor =  1.0302751
+step =   29 sza =    46.265 Earth-sun factor =  1.0302739
+step =   30 sza =    46.386 Earth-sun factor =  1.0302739
+step =   31 sza =    46.508 Earth-sun factor =  1.0302739
+step =   32 sza =    46.630 Earth-sun factor =  1.0302739
+step =   33 sza =    46.753 Earth-sun factor =  1.0302739
+step =   34 sza =    46.877 Earth-sun factor =  1.0302728
+step =   35 sza =    47.000 Earth-sun factor =  1.0302728
+step =   36 sza =    47.124 Earth-sun factor =  1.0302728
+step =   37 sza =    47.249 Earth-sun factor =  1.0302728
+step =   38 sza =    47.374 Earth-sun factor =  1.0302728
+step =   39 sza =    47.499 Earth-sun factor =  1.0302728
+step =   40 sza =    47.625 Earth-sun factor =  1.0302718
+step =   41 sza =    47.751 Earth-sun factor =  1.0302718
+step =   42 sza =    47.877 Earth-sun factor =  1.0302718
+step =   43 sza =    48.004 Earth-sun factor =  1.0302718
+step =   44 sza =    48.131 Earth-sun factor =  1.0302718
+step =   45 sza =    48.259 Earth-sun factor =  1.0302718
+step =   46 sza =    48.387 Earth-sun factor =  1.0302707
+step =   47 sza =    48.515 Earth-sun factor =  1.0302707
+step =   48 sza =    48.644 Earth-sun factor =  1.0302707
+step =   49 sza =    48.773 Earth-sun factor =  1.0302707
+step =   50 sza =    48.902 Earth-sun factor =  1.0302707
+step =   51 sza =    49.033 Earth-sun factor =  1.0302696
+step =   52 sza =    49.163 Earth-sun factor =  1.0302696
+step =   53 sza =    49.293 Earth-sun factor =  1.0302696
+step =   54 sza =    49.424 Earth-sun factor =  1.0302696
+step =   55 sza =    49.555 Earth-sun factor =  1.0302696
+step =   56 sza =    49.686 Earth-sun factor =  1.0302696
+step =   57 sza =    49.818 Earth-sun factor =  1.0302685
+step =   58 sza =    49.950 Earth-sun factor =  1.0302685
+step =   59 sza =    50.083 Earth-sun factor =  1.0302685
+step =   60 sza =    50.215 Earth-sun factor =  1.0302685
+step =   61 sza =    50.348 Earth-sun factor =  1.0302685
+ air temperature: USSA, 1976
+ air concentrations: USSA, 1976
+ ozone profile: USSA, 1976
+ DATAE1/SUN/susim_hi.flx
+ DATAE1/SUN/atlas3_1994_317_a.dat        
+ DATAE1/SUN/neckel.flx                   
+ DATAE1/SUN/sao2010.solref.converted     
+ aerosols:  Elterman (1968) continental profile
+step =    1 sza =    50.348 Earth-sun factor =  1.0302685
+step =    2 sza =    50.482 Earth-sun factor =  1.0302674
+step =    3 sza =    50.616 Earth-sun factor =  1.0302674
+step =    4 sza =    50.750 Earth-sun factor =  1.0302674
+step =    5 sza =    50.884 Earth-sun factor =  1.0302674
+step =    6 sza =    51.018 Earth-sun factor =  1.0302674
+step =    7 sza =    51.153 Earth-sun factor =  1.0302674
+step =    8 sza =    51.289 Earth-sun factor =  1.0302663
+step =    9 sza =    51.424 Earth-sun factor =  1.0302663
+step =   10 sza =    51.560 Earth-sun factor =  1.0302663
+step =   11 sza =    51.696 Earth-sun factor =  1.0302663
+step =   12 sza =    51.832 Earth-sun factor =  1.0302663
+step =   13 sza =    51.968 Earth-sun factor =  1.0302663
+step =   14 sza =    52.106 Earth-sun factor =  1.0302651
+step =   15 sza =    52.242 Earth-sun factor =  1.0302651
+step =   16 sza =    52.380 Earth-sun factor =  1.0302651
+step =   17 sza =    52.517 Earth-sun factor =  1.0302651
+step =   18 sza =    52.655 Earth-sun factor =  1.0302651
+step =   19 sza =    52.794 Earth-sun factor =  1.0302640
+step =   20 sza =    52.932 Earth-sun factor =  1.0302640
+step =   21 sza =    53.070 Earth-sun factor =  1.0302640
+step =   22 sza =    53.209 Earth-sun factor =  1.0302640
+step =   23 sza =    53.348 Earth-sun factor =  1.0302640
+step =   24 sza =    53.487 Earth-sun factor =  1.0302640
+step =   25 sza =    53.627 Earth-sun factor =  1.0302628
+step =   26 sza =    53.767 Earth-sun factor =  1.0302628
+step =   27 sza =    53.907 Earth-sun factor =  1.0302628
+step =   28 sza =    54.047 Earth-sun factor =  1.0302628
+step =   29 sza =    54.187 Earth-sun factor =  1.0302628
+step =   30 sza =    54.328 Earth-sun factor =  1.0302628
+step =   31 sza =    54.469 Earth-sun factor =  1.0302618
+step =   32 sza =    54.610 Earth-sun factor =  1.0302618
+step =   33 sza =    54.751 Earth-sun factor =  1.0302618
+step =   34 sza =    54.893 Earth-sun factor =  1.0302618
+step =   35 sza =    55.034 Earth-sun factor =  1.0302618
+step =   36 sza =    55.177 Earth-sun factor =  1.0302607
+step =   37 sza =    55.319 Earth-sun factor =  1.0302607
+step =   38 sza =    55.461 Earth-sun factor =  1.0302607
+step =   39 sza =    55.603 Earth-sun factor =  1.0302607
+step =   40 sza =    55.746 Earth-sun factor =  1.0302607
+step =   41 sza =    55.889 Earth-sun factor =  1.0302607
+step =   42 sza =    56.032 Earth-sun factor =  1.0302596
+step =   43 sza =    56.175 Earth-sun factor =  1.0302596
+step =   44 sza =    56.319 Earth-sun factor =  1.0302596
+step =   45 sza =    56.462 Earth-sun factor =  1.0302596
+step =   46 sza =    56.606 Earth-sun factor =  1.0302596
+step =   47 sza =    56.750 Earth-sun factor =  1.0302585
+step =   48 sza =    56.894 Earth-sun factor =  1.0302585
+step =   49 sza =    57.038 Earth-sun factor =  1.0302585
+step =   50 sza =    57.183 Earth-sun factor =  1.0302585
+step =   51 sza =    57.327 Earth-sun factor =  1.0302585
+step =   52 sza =    57.472 Earth-sun factor =  1.0302585
+step =   53 sza =    57.617 Earth-sun factor =  1.0302573
+step =   54 sza =    57.762 Earth-sun factor =  1.0302573
+step =   55 sza =    57.907 Earth-sun factor =  1.0302573
+step =   56 sza =    58.052 Earth-sun factor =  1.0302573
+step =   57 sza =    58.198 Earth-sun factor =  1.0302573
+step =   58 sza =    58.343 Earth-sun factor =  1.0302573
+step =   59 sza =    58.490 Earth-sun factor =  1.0302563
+step =   60 sza =    58.635 Earth-sun factor =  1.0302563
+step =   61 sza =    58.781 Earth-sun factor =  1.0302563
+ air temperature: USSA, 1976
+ air concentrations: USSA, 1976
+ ozone profile: USSA, 1976
+ DATAE1/SUN/susim_hi.flx
+ DATAE1/SUN/atlas3_1994_317_a.dat        
+ DATAE1/SUN/neckel.flx                   
+ DATAE1/SUN/sao2010.solref.converted     
+ aerosols:  Elterman (1968) continental profile
+step =    1 sza =    58.781 Earth-sun factor =  1.0302563
+step =    2 sza =    58.927 Earth-sun factor =  1.0302563
+step =    3 sza =    59.073 Earth-sun factor =  1.0302563
+step =    4 sza =    59.220 Earth-sun factor =  1.0302552
+step =    5 sza =    59.367 Earth-sun factor =  1.0302552
+step =    6 sza =    59.513 Earth-sun factor =  1.0302552
+step =    7 sza =    59.660 Earth-sun factor =  1.0302552
+step =    8 sza =    59.807 Earth-sun factor =  1.0302552
+step =    9 sza =    59.954 Earth-sun factor =  1.0302552
+step =   10 sza =    60.101 Earth-sun factor =  1.0302540
+step =   11 sza =    60.248 Earth-sun factor =  1.0302540
+step =   12 sza =    60.396 Earth-sun factor =  1.0302540
+step =   13 sza =    60.543 Earth-sun factor =  1.0302540
+step =   14 sza =    60.690 Earth-sun factor =  1.0302540
+step =   15 sza =    60.838 Earth-sun factor =  1.0302540
+step =   16 sza =    60.986 Earth-sun factor =  1.0302529
+step =   17 sza =    61.134 Earth-sun factor =  1.0302529
+step =   18 sza =    61.282 Earth-sun factor =  1.0302529
+step =   19 sza =    61.430 Earth-sun factor =  1.0302529
+step =   20 sza =    61.578 Earth-sun factor =  1.0302529
+step =   21 sza =    61.726 Earth-sun factor =  1.0302519
+step =   22 sza =    61.875 Earth-sun factor =  1.0302519
+step =   23 sza =    62.023 Earth-sun factor =  1.0302519
+step =   24 sza =    62.171 Earth-sun factor =  1.0302519
+step =   25 sza =    62.319 Earth-sun factor =  1.0302519
+step =   26 sza =    62.468 Earth-sun factor =  1.0302519
+step =   27 sza =    62.617 Earth-sun factor =  1.0302508
+step =   28 sza =    62.766 Earth-sun factor =  1.0302508
+step =   29 sza =    62.915 Earth-sun factor =  1.0302508
+step =   30 sza =    63.063 Earth-sun factor =  1.0302508
+step =   31 sza =    63.212 Earth-sun factor =  1.0302508
+step =   32 sza =    63.362 Earth-sun factor =  1.0302497
+step =   33 sza =    63.511 Earth-sun factor =  1.0302497
+step =   34 sza =    63.660 Earth-sun factor =  1.0302497
+step =   35 sza =    63.809 Earth-sun factor =  1.0302497
+step =   36 sza =    63.958 Earth-sun factor =  1.0302497
+step =   37 sza =    64.107 Earth-sun factor =  1.0302497
+step =   38 sza =    64.257 Earth-sun factor =  1.0302485
+step =   39 sza =    64.406 Earth-sun factor =  1.0302485
+step =   40 sza =    64.556 Earth-sun factor =  1.0302485
+step =   41 sza =    64.705 Earth-sun factor =  1.0302485
+step =   42 sza =    64.854 Earth-sun factor =  1.0302485
+step =   43 sza =    65.004 Earth-sun factor =  1.0302485
+step =   44 sza =    65.154 Earth-sun factor =  1.0302474
+step =   45 sza =    65.304 Earth-sun factor =  1.0302474
+step =   46 sza =    65.453 Earth-sun factor =  1.0302474
+step =   47 sza =    65.603 Earth-sun factor =  1.0302474
+step =   48 sza =    65.753 Earth-sun factor =  1.0302474
+step =   49 sza =    65.903 Earth-sun factor =  1.0302463
+step =   50 sza =    66.053 Earth-sun factor =  1.0302463
+step =   51 sza =    66.202 Earth-sun factor =  1.0302463
+step =   52 sza =    66.352 Earth-sun factor =  1.0302463
+step =   53 sza =    66.502 Earth-sun factor =  1.0302463
+step =   54 sza =    66.652 Earth-sun factor =  1.0302463
+step =   55 sza =    66.802 Earth-sun factor =  1.0302452
+step =   56 sza =    66.952 Earth-sun factor =  1.0302452
+step =   57 sza =    67.102 Earth-sun factor =  1.0302452
+step =   58 sza =    67.252 Earth-sun factor =  1.0302452
+step =   59 sza =    67.402 Earth-sun factor =  1.0302452
+step =   60 sza =    67.551 Earth-sun factor =  1.0302452
+step =   61 sza =    67.702 Earth-sun factor =  1.0302440
