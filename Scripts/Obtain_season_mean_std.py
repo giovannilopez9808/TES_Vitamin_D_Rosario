@@ -8,9 +8,9 @@ def consecutive_day(day, month, year):
 
 
 def results(data, text):
-    mean = np.round(np.mean(data), 2)
-    std = np.round(np.std(data), 2)
-    print("  ", text, mean, std)
+    mean = np.mean(data)
+    std = np.std(data)
+    print("\t{}\t{:.2f}\t{:.2f}".format(text, mean, std))
 
 
 inv_days = [consecutive_day(21, 6, 2019), consecutive_day(21, 9, 2019)]
