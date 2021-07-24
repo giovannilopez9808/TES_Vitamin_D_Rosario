@@ -89,8 +89,8 @@ plt.subplots_adjust(top=0.954,
                     hspace=0.2,
                     wspace=0.2
                     )
-plt.savefig(dir_graphics+"Previtamin_D.png",
-            dpi=300)
+# plt.savefig(dir_graphics+"Previtamin_D.png",
+#             dpi=300)
 plt.show()
 
 data_Herman_ver = part_period(data_Herman, ver)

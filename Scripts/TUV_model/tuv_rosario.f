@@ -231,7 +231,7 @@ c      OPEN(UNIT=kout,FILE='tuvlog',STATUS='UNKNOWN')
 
 * ___ SECTION 1: SIMPLE INPUT VARIABLES --------------------------------
 ******* Read simple input variables from a file:
-      inpfil="PUNA"
+      inpfil="RARG"
       CALL rdinp(intrct,inpfil,outfil,nstr,lat,lon,tmzone,iyear,imonth,
      $   iday,zstart,zstop,nz,wstart,wstop,nwint,tstart,tstop,nt,lzenit,
      $   alsurf,psurf,o3_tc,so2_tc,no2_tc,taucld,zbase,ztop,tauaer,
@@ -246,7 +246,7 @@ c      OPEN(UNIT=kout,FILE='tuvlog',STATUS='UNKNOWN')
          iout = 30
       ENDIF
 !Se llama al archivo que contiene todos los parametros de cada dia
-      open(13,file="datos_puna.txt")
+      open(13,file="datos_rarg.txt")
         read(13,*) narc
        do  archivo=1,narc
        read(13,*) outfil,o3_tc,iyear,imonth,iday

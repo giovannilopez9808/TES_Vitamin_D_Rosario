@@ -27,6 +27,7 @@ time_med = []
 file_result = open(dir_results+"dosis_time.csv", "w")
 file_result.write("Dia,vitamin,MED\n")
 for file in files:
+    print(file)
     hour, uv_list, vitamin_list = np.loadtxt(dir_data+file,
                                              delimiter=",",
                                              skiprows=1,

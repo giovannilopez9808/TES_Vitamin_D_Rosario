@@ -43,18 +43,18 @@ dates, time_vitamin, time_med = np.loadtxt(
 days = 366
 title = "Dosis pre-vitamina D 136 J/m$^2$"
 color = "#E7CA01"
-plt.plot(np.arange(days), time_vitamin,
+plt.plot(np.arange(len(time_vitamin)), time_vitamin,
          color=color,
          label=title,
          lw=1.5)
-plt.fill_between(np.arange(days), time_vitamin,
+plt.fill_between(np.arange(len(time_vitamin)), time_vitamin,
                  time_med,
                  color="#E7CA01",
                  alpha=0.5)
 lim, div = 90, 10
 title = "Dosis eritémica mínima 250 J/m$^2$"
 color = "#fb8500"
-plt.plot(np.arange(days), time_med,
+plt.plot(np.arange(len(time_med)), time_med,
          color=color,
          label=title,
          lw=1.5)
@@ -68,6 +68,6 @@ plt.subplots_adjust(top=0.956,
                     )
 plt.legend(frameon=False,
            fontsize=10)
-plt.savefig(dir_graphics+"dosis_vitamin.png",
-            dpi=300)
+# plt.savefig(dir_graphics+"dosis_vitamin.png",
+#             dpi=300)
 plt.show()
