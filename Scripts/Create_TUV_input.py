@@ -1,6 +1,4 @@
 import pandas as pd
-import numpy as np
-import datetime
 
 
 def read_ozono_data(path="", file=""):
@@ -25,15 +23,12 @@ def format_number(number):
 parameters = {"path TUV": "TUV_model/",
               "path data": "../Data/Rosario_period/",
               "file ozono data": "data_ozono.csv",
-              "date initial": datetime.date(2019, 6, 1),
-              "date final": datetime.date(2020, 5, 31)
               }
-days = (parameters["date final"]-parameters["date initial"]).days+1
 ozono_data = read_ozono_data(parameters["path data"],
                              parameters["file ozono data"])
 file = open("{}datos.txt".format(parameters["path TUV"]),
             "w")
-file.write("{}\n".format(days))
+file.write("{}\n".format(len(ozono_data.index)))
 for index in ozono_data.index:
     date = ozono_data["Date"][index]
     date, year, month, day = date_yymmdd(date)

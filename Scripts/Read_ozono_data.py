@@ -23,6 +23,8 @@ def format_data(data=pd.DataFrame()):
 def clean_data(data=pd.DataFrame()):
     columns = data.columns
     data = data.drop(columns.drop("Ozone"), 1)
+    data = data[data["Ozone"] < 400]
+    data = data[data["Ozone"] > 200]
     return data
 
 
@@ -34,6 +36,10 @@ def select_data_from_period(data=pd.DataFrame(), date_initial="2020-01-01", date
 
 def format_number(number):
     return str(number).zfill(2)
+
+
+def obtain_mean(number1, number2):
+    return (number1+number2)/2
 
 
 parameters = {"path data": "../Data/",
@@ -54,11 +60,11 @@ monthly_mean = data.resample("MS").mean()
 data = data.fillna(-1)
 for date in data.index:
     if data["Ozone"][date] == -1:
-        month = format_number(date.month)
-        year = str(date.year)
-        index = pd.to_datetime("{}-{}-01".format(year,
-                                                 month))
-        data["Ozone"][date] = monthly_mean["Ozone"][index]
+        index_i = date+pd.Timedelta(days=-1)
+        index_f = date+pd.Timedelta(days=1)
+        mean = obtain_mean(data["Ozone"][index_i],
+                           data["Ozone"][index_f])
+        data["Ozone"][date] = mean
 data.to_csv("{}{}{}".format(parameters["path data"],
                             parameters["path files"],
                             parameters["filename"]),
