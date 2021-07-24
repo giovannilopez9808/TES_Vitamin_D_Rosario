@@ -12,3 +12,4 @@ ResultadosTUV/
 *.bbl
 *.blg
 *.dvi
+*.o
