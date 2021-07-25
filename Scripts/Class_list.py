@@ -4,6 +4,46 @@ import numpy as np
 import os
 
 
+class Herman_equation:
+    def __init__(self, sza, ozone):
+        self.coeficients = {"RAF": {"a": 1.349378286522954,
+                                    "b": -0.0002926808443875372,
+                                    "c": -0.0003059282407232034,
+                                    "d": 2.879164470755759e-8,
+                                    "e": 1.920553492457117e-8,
+                                    "f": -8.580442654658103e-13},
+                            "U": {"a": 0.9659616883022778,
+                                  "b": 0.0001089314449687077,
+                                  "c": -0.0002681987275053843,
+                                  "d": 1.410783665933483e-8,
+                                  "e": 1.894213900598701e-8,
+                                  "f": 1.695104643516458e-12}
+                            }
+        self.ozone = ozone
+        self.sza = sza
+        self.equation()
+
+    def equation(self):
+        raf = self.obtain_raf()
+        u = self.obtain_u()
+        self.value = u*(self.ozone/200)**(-raf)
+
+    def obtain_raf(self):
+        coeficient = self.coeficients["RAF"]
+        return self.coeficients_equation(coeficient)
+
+    def obtain_u(self):
+        coeficient = self.coeficients["U"]
+        return self.coeficients_equation(coeficient)
+
+    def coeficients_equation(self, coeficient={}):
+        up = coeficient["a"]+coeficient["c"] * self.sza**2
+        up += coeficient["e"]*self.sza**4
+        down = 1+coeficient["b"]*self.sza**2
+        down += coeficient["d"]*self.sza**4+coeficient["f"]*self.sza**6
+        return up/down
+
+
 class OMI_data:
     def __init__(self, path_data="", file_name="", day_initial="2000-01-01", day_final="2001-01-01"):
         """

@@ -4,10 +4,6 @@ import pandas as pd
 import numpy as np
 
 
-def part_period(data, skip):
-    return data[skip:skip+91]
-
-
 def RD(data1, data2, text_data1, text_data2, period):
     cond = data2 != 0
     rd = np.abs((data1[cond]-data2[cond])/data2[cond])*100
@@ -40,7 +36,7 @@ def format_CIE_data(data: pd.DataFrame()):
 
 
 parameters = {"path data": "../Data/",
-              "file data": "Daily_max_pre_vitamin_D.csv",
+              "file data": "Daily_TUV_data.csv",
               "Herman data": "Herman_data.csv",
               "CIE data": "CIE_data.csv",
               "path graphics": "../Graphics/",
@@ -61,7 +57,7 @@ plt.scatter(data.index, data["Vitamin D"],
             c="#aaaff0",
             label="Modelo TUV",
             marker=".")
-plt.scatter(data_Herman.index, data_Herman["Herman (2010)"],
+plt.scatter(data_Herman.index, data_Herman["Herman"],
             c="#000000",
             label="Herman",
             marker=".")
@@ -97,7 +93,7 @@ plt.subplots_adjust(top=0.954,
                     )
 plt.savefig("{}{}".format(parameters["path graphics"],
                           parameters["graphics name"]),
-            dpi=300)
+            dpi=400)
 # obtan_season_RD(data,data_CIE,)
 # data_Herman_ver = part_period(data_Herman, parameters["date summer"])
 # data_vitamin_ver = part_period(data_vitamin, parameters["date summer"])
