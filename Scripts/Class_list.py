@@ -57,8 +57,8 @@ class TUV_model:
     hora inicial, final, aod y fecha
     """
 
-    def __init__(self, path, date, ozone, aod, hour_i, hour_f,max_rows):
-        self.max_rows=max_rows
+    def __init__(self, path, date, ozone, aod, hour_i, hour_f, max_rows):
+        self.max_rows = max_rows
         self.hour_i = hour_i
         self.hour_f = hour_f
         self.ozone = ozone
@@ -104,9 +104,8 @@ class TUV_model:
         Lectura de los datos del TUV
         """
         skiprows = 132
-        self.hours, self.uvi, self.vitamin = np.loadtxt("{}{}.txt".format(self.path,
-                                                                          self.outfile),
-                                                        skiprows=skiprows,
-                                                        max_rows=self.max_rows,
-                                                        usecols=[0, 2, 3],
-                                                        unpack=True)
+        self.hours, self.sza, self.uvi, self.vitamin = np.loadtxt("{}{}.txt".format(self.path,
+                                                                                    self.outfile),
+                                                                  skiprows=skiprows,
+                                                                  max_rows=self.max_rows,
+                                                                  unpack=True)

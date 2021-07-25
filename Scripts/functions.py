@@ -1,3 +1,6 @@
+import pandas as pd
+
+
 def cut_data_from_date_period(data, day_initial, day_final):
     data = data[data.index.date >= day_initial]
     data = data[data.index.date <= day_final]
@@ -10,3 +13,40 @@ def date_to_yymmdd(date):
     day = str(date.day).zfill(2)
     date = year+month+day
     return date, year, month, day
+
+
+def obtain_xticks(dates):
+    months = [dates[0]]
+    for date in dates:
+        if months[-1].month != date.month:
+            months.append(date)
+    year = months[-1].year
+    month = months[-1].month+1
+    if month > 12:
+        month = 1
+        year += 1
+    date = pd.to_datetime("{}-{}-01".format(year,
+                                            str(month).zfill(2)))
+    months.append(date)
+    months_names = obtain_month_names(months)
+    return months, months_names
+
+
+def obtain_month_names(dates):
+    months_names = []
+    for date in dates:
+        months_names.append(date.strftime("%b"))
+    return months_names
+
+
+def read_data(path="", file=""):
+    data = pd.read_csv("{}{}".format(path,
+                                     file))
+    data = format_data(data)
+    return data
+
+
+def format_data(data: pd.DataFrame()):
+    data.index = pd.to_datetime(data["Date"])
+    data = data.drop("Date", 1)
+    return data
