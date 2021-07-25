@@ -3,7 +3,7 @@ import numpy as np
 import datetime
 
 
-def calc_dosis(hour, data, lim):
+def obtain_doses(hour, data, lim):
     var = False
     n = 0
     dosis = 0
@@ -17,36 +17,30 @@ def calc_dosis(hour, data, lim):
     return time
 
 
-def obtain_date(file=""):
-    date = file.replace(".csv", "")
-    year = date[0:2]
-    month = date[2:4]
-    day = date[4:6]
-    date = "{}-{}-{}".format(year,
-                             month,
-                             day)
-    return date
-
-
-dir_data = "../PreVitamin_D/Rosario/"
-dir_results = "../Data/Rosario_period/"
-files = np.sort(listdir(dir_data))
-dosis_vitamin = 136
-dosis_med = 250
-time_vitamin = []
-time_med = []
-file_result = open(dir_results+"dosis_time.csv", "w")
+parameters = {"path data": "../PreVitamin_D/Rosario/",
+              "path results": "../Data/",
+              "file results": "doses_time.csv",
+              "Vitamin Doses": 136,
+              "MED": 250,
+              }
+files = np.sort(listdir(parameters["path data"]))
+file_result = open("{}{}".format(parameters["path results"],
+                                 parameters["file results"]),
+                   "w")
 file_result.write("Date,vitamin,MED\n")
 for file in files:
-    date = obtain_date(file)
-    hour, uv_list, vitamin_list = np.loadtxt(dir_data+file,
+    hour, uv_list, vitamin_list = np.loadtxt("{}{}".format(parameters["path data"],
+                                                           file),
                                              delimiter=",",
                                              skiprows=1,
-                                             usecols=[0, 2, 3],
                                              unpack=True)
-    time_vitamin = calc_dosis(hour, vitamin_list, dosis_vitamin)
-    time_med = calc_dosis(hour, uv_list/40, dosis_med)
-    file_result.write("{},{},{}\n".format(date,
+    time_vitamin = obtain_doses(hour,
+                                vitamin_list,
+                                parameters["Vitamin Doses"])
+    time_med = obtain_doses(hour,
+                            uv_list/40,
+                            parameters["MED"])
+    file_result.write("{},{},{}\n".format(file.replace(".csv", ""),
                                           time_vitamin,
                                           time_med))
 file_result.close()
