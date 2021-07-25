@@ -1,8 +1,4 @@
-Data/Terra/
-Data/Aqua/
-Data/OMI/
-Data/OMI_500/
-ResultadosTUV/
+__pycache__/
 *.aux
 *.fdb_latexmk
 *.fls
