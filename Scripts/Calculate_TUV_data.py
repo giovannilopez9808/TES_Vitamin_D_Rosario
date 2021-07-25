@@ -1,5 +1,6 @@
 from Class_list import TUV_model
 import pandas as pd
+import os
 
 
 def read_data(path="", file=""):
@@ -52,4 +53,5 @@ for date in data.index:
                                            TUV_uvi,
                                            TUV_vitamin))
     file.close()
+os.system("rm {}*.txt".format(parameters["path results"]))
 print("\n")
