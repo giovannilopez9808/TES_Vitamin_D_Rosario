@@ -30,7 +30,7 @@ def obtain_month_names():
 
 
 parameters = {"path data": "../Data/Rosario_period/",
-              "file data": "sza_vitamin_max.csv",
+              "file data": "Max_pre_vitamin_D.csv",
               "Herman data": "Herman_data.csv",
               "CIE data": "CIE_data.csv",
               "path graphics": "../Graphics/",

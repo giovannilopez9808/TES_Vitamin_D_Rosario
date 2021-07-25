@@ -4,7 +4,7 @@ import pandas as pd
 
 parameters = {"path data": "../PreVitamin_D/Rosario/",
               "path results": "../Data/",
-              "file results": "Max_pre_vitamin_D.csv",
+              "file results": "Daily_max_pre_vitamin_D.csv",
               }
 files = sorted(listdir(parameters["path data"]))
 file_result = open("{}{}".format(parameters["path results"],
