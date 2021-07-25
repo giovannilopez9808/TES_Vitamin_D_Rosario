@@ -8,11 +8,11 @@
 # FOBJS    : all required object files that do not use the include file
 #
 
-EXC = tuv_rosario.out
+EXC = tuv.out
 
 INCLUDES = params 
 
-USE_INCL = tuv_rosario.o \
+USE_INCL = tuv.o \
            grids.o \
            rdinp.o rdetfl.o rdxs.o \
            swphys.o swbiol.o swchem.o rxn.o qys.o \
@@ -24,7 +24,7 @@ USE_INCL = tuv_rosario.o \
            sphers.o  \
 	   la_srb.o \
            rtrans.o \
-	   savoutNA.o \
+	   savout.o \
            newlst.o \
            wrflut.o \
            waters.o \

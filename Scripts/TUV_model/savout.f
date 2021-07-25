@@ -116,10 +116,7 @@
      $   lzenit,nms,ims,nmj,imj,nz,z,tlev,airden,izout,nw,wl,etf,iwfix,
      $   nt,t,sza,itfix,ns,slabel,isfix,nj,jlabel,ijfix,svj_zj,svj_tj,
      $   svj_zt,svr_zs,svr_ts,svr_zt,svf_zw,svf_tw,svf_zt,svi_zw,svi_tw,
-     $   svi_zt,
-* Element aggregate to save in Folder Results TUV
-* Gamaliel Lopez Padilla
-     $     sta,tipo)
+     $   svi_zt)
 
       IMPLICIT NONE
       INCLUDE 'params'
@@ -165,9 +162,8 @@
 
       CHARACTER*6 finame
       integer nlen
-! Element aggregate to save de model result in folder "station/Resultados TUV" 
-      !sta is going to save de name of the station
-      character sta*3,tipo*8
+      ! Path to save the results
+      character path*24
       DO iw = 1,nw-1
          wu(iw) = wl(iw+1)
          wc(iw) = (wl(iw)+wu(iw))/2.
@@ -175,11 +171,9 @@
 
       IF(iout .NE. 6) THEN
          CALL atrim(outfil,finame,nlen)
-c         OPEN(UNIT=iout,FILE=finame(1:nlen),
-c     $        STATUS='UNKNOWN')
-         OPEN(UNIT=iout,
-     $      FILE='../'//sta//"/"//tipo//"/ResultadosTUV/"//finame(1:nlen
-     $      )//'.txt',STATUS='UNKNOWN')
+         path="../PreVitamin_D/Rosario/"
+         OPEN(UNIT=iout,FILE=path//finame(1:nlen)//'.txt',
+     $      STATUS='UNKNOWN')
       ENDIF
 
 ***** write out if looping over sza:
