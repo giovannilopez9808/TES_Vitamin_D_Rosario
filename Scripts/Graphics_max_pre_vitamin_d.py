@@ -21,13 +21,14 @@ data_CIE = read_data(parameters["path data"],
                      parameters["CIE data"])
 data_CIE = format_CIE_data(data_CIE)
 plt.scatter(data.index, data["Vitamin D"],
-            c="#aaaff0",
+            c="#5158BB",
             label="Modelo TUV",
             marker=".")
 plt.scatter(data_Herman.index, data_Herman["Herman"],
             c="#000000",
             label="Herman",
-            marker=".")
+            marker="+",
+            alpha=0.75)
 plt.scatter(data_CIE.index, data_CIE["CIE-2014"],
             c="#33B62B",
             label="Coef. Prop.",
