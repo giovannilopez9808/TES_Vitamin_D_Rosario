@@ -5,7 +5,7 @@ import pandas as pd
 
 parameters = {"path data": "../Data/",
               "path graphics": "../Graphics/",
-              "file data": "doses_time.csv",
+              "file data": "Doses_time.csv",
               "graphics name": "dosis_vitamin.png",
               "date initial": "2019-06-01",
               "date final": "2020-06-01",
@@ -47,10 +47,10 @@ plt.subplots_adjust(top=0.956,
                     left=0.106,
                     right=0.958,
                     hspace=0.248,
-                    wspace=0.2
-                    )
+                    wspace=0.2)
 plt.legend(frameon=False,
-           fontsize=12)
-plt.savefig("{}{}".format(parameters["path graphics"],
-                          parameters["graphics name"]),
-            dpi=400)
+           fontsize=11)
+# plt.savefig("{}{}".format(parameters["path graphics"],
+#                           parameters["graphics name"]),
+#             dpi=400)
+plt.show()

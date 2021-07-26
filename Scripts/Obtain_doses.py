@@ -19,7 +19,7 @@ def obtain_doses(hour, data, lim):
 
 parameters = {"path data": "../PreVitamin_D/Rosario/",
               "path results": "../Data/",
-              "file results": "doses_time.csv",
+              "file results": "Doses_time.csv",
               "Vitamin Doses": 136,
               "MED": 250,
               }
@@ -33,6 +33,7 @@ for file in files:
                                                            file),
                                              delimiter=",",
                                              skiprows=1,
+                                             usecols=[0, 2, 3],
                                              unpack=True)
     time_vitamin = obtain_doses(hour,
                                 vitamin_list,
