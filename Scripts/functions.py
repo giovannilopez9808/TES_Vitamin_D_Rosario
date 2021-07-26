@@ -16,20 +16,28 @@ def date_to_yymmdd(date):
 
 
 def obtain_xticks(dates):
-    months = [dates[0]]
+    months = [obtain_first_date_for_month(dates[0])]
     for date in dates:
         if months[-1].month != date.month:
+            date = obtain_first_date_for_month(date)
             months.append(date)
     year = months[-1].year
     month = months[-1].month+1
     if month > 12:
         month = 1
         year += 1
-    date = pd.to_datetime("{}-{}-01".format(year,
-                                            str(month).zfill(2)))
+    date = obtain_first_date_for_month(months[-1])
     months.append(date)
     months_names = obtain_month_names(months)
     return months, months_names
+
+
+def obtain_first_date_for_month(date):
+    year = date.year
+    month = date.month
+    date = pd.to_datetime("{}-{}-01".format(year,
+                                            str(month).zfill(2)))
+    return date
 
 
 def obtain_month_names(dates):
