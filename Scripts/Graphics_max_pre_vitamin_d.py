@@ -1,39 +1,6 @@
 import matplotlib.pyplot as plt
 from functions import *
 import pandas as pd
-import numpy as np
-
-
-def RD(data1, data2, text_data1, text_data2, period):
-    cond = data2 != 0
-    rd = np.abs((data1[cond]-data2[cond])/data2[cond])*100
-    rd = np.mean(rd)
-    print("RD\t{}\t{}\t{}\t{:.2f}".format(period,
-                                          text_data1,
-                                          text_data2,
-                                          rd))
-
-
-def format_CIE_data(data: pd.DataFrame()):
-    seasons = {"winter": {"Period": [pd.to_datetime("2019-06-21"),
-                                     pd.to_datetime("2019-09-20")],
-                          "value": 1.6/40},
-               "summer": {"Period": [pd.to_datetime("2019-12-21"),
-                                     pd.to_datetime("2020-03-20")],
-                          "value": 2/40
-                          }
-               }
-    for date in data.index:
-        value = data["CIE-2014"][date]
-        for season in seasons:
-            dataset = seasons[season]
-            if date >= dataset["Period"][0] and date <= dataset["Period"][1]:
-                data["CIE-2014"][date] = value * dataset["value"]
-    # Drop zeros
-    zeros = data[data["CIE-2014"] == 0]
-    data = data.drop(zeros.index)
-    return data
-
 
 parameters = {"path data": "../Data/",
               "file data": "Daily_TUV_data.csv",
@@ -94,14 +61,3 @@ plt.subplots_adjust(top=0.954,
 plt.savefig("{}{}".format(parameters["path graphics"],
                           parameters["graphics name"]),
             dpi=400)
-# obtan_season_RD(data,data_CIE,)
-# data_Herman_ver = part_period(data_Herman, parameters["date summer"])
-# data_vitamin_ver = part_period(data_vitamin, parameters["date summer"])
-# data_Herman_inv = part_period(data_Herman, parameters["date winter"])
-# data_vitamin_inv = part_period(data_vitamin, parameters["date winter"])
-# RD(data_vitamin_inv, data_CIE_inv, "TUV", "CIE", "Invierno")
-# RD(data_vitamin_ver, data_CIE_ver, "TUV", "CIE", "Verano\t")
-# RD(data_Herman_inv, data_CIE_inv, "Herman", "CIE", "Invierno")
-# RD(data_Herman_ver, data_CIE_ver, "Herman", "CIE", "Verano\t")
-# RD(data_Herman_inv, data_vitamin_inv, "Hermam", "TUV", "Invierno")
-# RD(data_Herman_ver, data_vitamin_ver, "Hermam", "TUV", "Verano\t")
