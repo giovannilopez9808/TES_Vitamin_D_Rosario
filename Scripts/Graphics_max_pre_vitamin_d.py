@@ -57,8 +57,7 @@ plt.subplots_adjust(top=0.954,
                     left=0.126,
                     right=0.957,
                     hspace=0.2,
-                    wspace=0.2
-                    )
+                    wspace=0.2)
 plt.savefig("{}{}".format(parameters["path graphics"],
                           parameters["graphics name"]),
             dpi=400)
