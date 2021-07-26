@@ -5,8 +5,8 @@ import numpy as np
 
 
 def obtain_RD_season(data1=pd.DataFrame(), data2=pd.DataFrame(), text1="", text2="", dates=[]):
-    data1 = select_data_from_period(data1, dates)
-    data2 = select_data_from_period(data2, dates)
+    data1 = select_data_from_date_period(data1, dates[0], dates[1])
+    data2 = select_data_from_date_period(data2, dates[0], dates[1])
     data1 = data1[data2.index]
     data1 = np.array(list(data1))
     data2 = np.array(list(data2))
@@ -14,12 +14,6 @@ def obtain_RD_season(data1=pd.DataFrame(), data2=pd.DataFrame(), text1="", text2
               data2,
               text1,
               text2)
-
-
-def select_data_from_period(data, dates):
-    data = data[data.index >= dates[0]]
-    data = data[data.index <= dates[1]]
-    return data
 
 
 def obtain_RD(data1, data2, text1, text2):

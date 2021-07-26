@@ -86,9 +86,9 @@ class OMI_data:
         """
         Funcion que corta los datos en un periodo
         """
-        self.data = cut_data_from_date_period(self.data,
-                                              self.day_initial,
-                                              self.day_final)
+        self.data = select_data_from_date_period(self.data,
+                                                 self.day_initial,
+                                                 self.day_final)
 
 
 class TUV_model:
