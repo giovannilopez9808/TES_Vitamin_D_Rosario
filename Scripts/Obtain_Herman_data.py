@@ -3,7 +3,7 @@ from functions import *
 import pandas as pd
 
 
-def read_SZA_data(path="", file=""):
+def read_SZA_data(path: str, file: str):
     data = read_data(path,
                      file)
     return data["SZA"]

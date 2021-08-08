@@ -5,7 +5,7 @@ import os
 
 
 class Herman_equation:
-    def __init__(self, sza, ozone):
+    def __init__(self, sza: float, ozone: float):
         self.coeficients = {"RAF": {"a": 1.349378286522954,
                                     "b": -0.0002926808443875372,
                                     "c": -0.0003059282407232034,
@@ -36,7 +36,7 @@ class Herman_equation:
         coeficient = self.coeficients["U"]
         return self.coeficients_equation(coeficient)
 
-    def coeficients_equation(self, coeficient={}):
+    def coeficients_equation(self, coeficient: dict):
         up = coeficient["a"]+coeficient["c"] * self.sza**2
         up += coeficient["e"]*self.sza**4
         down = 1+coeficient["b"]*self.sza**2
@@ -45,7 +45,7 @@ class Herman_equation:
 
 
 class OMI_data:
-    def __init__(self, path_data="", file_name="", day_initial="2000-01-01", day_final="2001-01-01"):
+    def __init__(self, path_data: str, file_name: str, day_initial: str, day_final: str):
         """
         Lectura de los datos de OMI recompilados.
 
@@ -97,7 +97,7 @@ class TUV_model:
     hora inicial, final, aod y fecha
     """
 
-    def __init__(self, path, date, ozone, aod, hour_i, hour_f, max_rows):
+    def __init__(self, path: str, date: pd.Timestamp, ozone: float, aod: float, hour_i: int, hour_f: int, max_rows: int):
         self.max_rows = max_rows
         self.hour_i = hour_i
         self.hour_f = hour_f

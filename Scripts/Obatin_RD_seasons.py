@@ -4,7 +4,7 @@ import pandas as pd
 import numpy as np
 
 
-def obtain_RD_season(data1=pd.DataFrame(), data2=pd.DataFrame(), text1="", text2="", dates=[]):
+def obtain_RD_season(data1: pd.DataFrame, data2: pd.DataFrame, text1: str, text2: str, dates: list):
     data1 = select_data_from_date_period(data1, dates[0], dates[1])
     data2 = select_data_from_date_period(data2, dates[0], dates[1])
     data1 = data1[data2.index]
@@ -16,7 +16,7 @@ def obtain_RD_season(data1=pd.DataFrame(), data2=pd.DataFrame(), text1="", text2
               text2)
 
 
-def obtain_RD(data1, data2, text1, text2):
+def obtain_RD(data1: pd.DataFrame, data2: pd.DataFrame, text1: str, text2: str):
     no_zeros = data2 != 0
     data1 = data1[no_zeros]
     data2 = data2[no_zeros]

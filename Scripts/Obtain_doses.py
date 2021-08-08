@@ -3,7 +3,7 @@ import numpy as np
 import datetime
 
 
-def obtain_doses(hour, data, lim):
+def obtain_doses(hour: list, data: list, lim: float):
     var = False
     n = 0
     dosis = 0
@@ -13,7 +13,7 @@ def obtain_doses(hour, data, lim):
             var = True
         else:
             n += 1
-    time = str(int((hour[n]-hour[0])*60)+1)
+    time = int((hour[n]-hour[0])*60)+1
     return time
 
 
