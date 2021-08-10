@@ -32,7 +32,7 @@ def obtain_doses(hour: list, data: list, lim: float, n: int):
 
 
 parameters = {"path data": "../PreVitamin_D/",
-              "city": "Santiago",
+              "city": "Rosario",
               "path results": "../Data/",
               "file results": "Doses_time",
               "Vitamin Doses": 136,
