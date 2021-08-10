@@ -16,6 +16,8 @@ UVI_data = data["UVI"]
 for season in parameters["seasons"]:
     print("Season: {}".format(season))
     dates = parameters["seasons"][season]
-    season_data = select_data_from_date_period(UVI_data, dates[0], dates[1])
+    season_data = select_data_from_date_period(UVI_data,
+                                               dates[0],
+                                               dates[1])
     print("\tMean: {:.3f}".format(season_data.mean()))
     print("\tSTD: {:.3f}".format(season_data.std()))
