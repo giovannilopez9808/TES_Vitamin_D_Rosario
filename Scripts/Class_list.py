@@ -97,13 +97,14 @@ class TUV_model:
     hora inicial, final, aod y fecha
     """
 
-    def __init__(self, path: str, date: pd.Timestamp, ozone: float, aod: float, hour_i: int, hour_f: int, max_rows: int):
+    def __init__(self, path: str, city: str, date: pd.Timestamp, ozone: float, aod: float, hour_i: int, hour_f: int, max_rows: int):
         self.max_rows = max_rows
         self.hour_i = hour_i
         self.hour_f = hour_f
         self.ozone = ozone
         self.date = date
         self.path = path
+        self.city = city
         self.aod = aod
         self.obtain_yymmdd_from_date()
 
@@ -129,6 +130,7 @@ class TUV_model:
         """
         input_file = open("TUV_input.txt",
                           "w")
+        input_file.write("{}\n".format(self.city))
         input_file.write("{} {} {} 20{} {} {} {} {}".format(self.outfile,
                                                             self.ozone,
                                                             self.aod,
@@ -149,3 +151,24 @@ class TUV_model:
                                                                   skiprows=skiprows,
                                                                   max_rows=self.max_rows,
                                                                   unpack=True)
+
+
+class Citys_data:
+    def __init__(self, city: str):
+        self.datasets = {"Punta Arenas": {"folder": "Punta_Arenas",
+                                          "file dates": "PUNA_dates.csv",
+                                          "input file": "PUNA",
+                                          "AOD": 0.23},
+                         "Rosario": {"folder": "Rosario",
+                                     "file dates": "RARG_dates.csv",
+                                     "input file": "RARG",
+                                     "AOD": 0.34},
+                         "Santiago": {"folder": "Santiago",
+                                      "file dates": "SANC_dates.csv",
+                                      "input file": "SANC",
+                                      "AOD": 0.5}}
+        self.city = city
+        self.select_dataset_for_city()
+
+    def select_dataset_for_city(self):
+        self.dataset = self.datasets[self.city]
