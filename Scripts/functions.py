@@ -23,7 +23,7 @@ def date_to_yymmdd(date: pd.DataFrame):
 
 def obtain_xticks(dates: list):
     """
-    Obtiene los ticks a partir de una lista de fechas, los ticks son los nombres de los meses
+    Crea una lista con el primer día del mes a partir de una lista que contiene los dias de los datos
     """
     months = [obtain_first_date_for_month(dates[0])]
     for date in dates:
@@ -35,7 +35,8 @@ def obtain_xticks(dates: list):
     if month > 12:
         month = 1
         year += 1
-    date = obtain_first_date_for_month(months[-1])
+    date = pd.to_datetime("{}-{}-01".format(year,
+                                            str(month).zfill(2)))
     months.append(date)
     months_names = obtain_month_names(months)
     return months, months_names
