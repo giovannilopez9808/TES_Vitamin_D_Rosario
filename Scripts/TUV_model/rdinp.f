@@ -186,7 +186,7 @@ CSM         PAUSE
  !     WRITE(*,*) '<enter> = keep these settings,or'
  !     WRITE(*,*) 'Type variable name to change (lower case):'
       !READ(*,300) avar
-      avar: str
+ !     avar: str
  300  FORMAT(A7)
 
 * confirm

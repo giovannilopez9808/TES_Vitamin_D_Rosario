@@ -231,7 +231,8 @@ c      OPEN(UNIT=kout,FILE='tuvlog',STATUS='UNKNOWN')
 
 * ___ SECTION 1: SIMPLE INPUT VARIABLES --------------------------------
 ******* Read simple input variables from a file:
-      inpfil="RARG"
+      open(13,file="TUV_input.txt")
+      read(13,*) inpfil
       CALL rdinp(intrct,inpfil,outfil,nstr,lat,lon,tmzone,iyear,imonth,
      $   iday,zstart,zstop,nz,wstart,wstop,nwint,tstart,tstop,nt,lzenit,
      $   alsurf,psurf,o3_tc,so2_tc,no2_tc,taucld,zbase,ztop,tauaer,
@@ -246,7 +247,6 @@ c      OPEN(UNIT=kout,FILE='tuvlog',STATUS='UNKNOWN')
          iout = 30
       ENDIF
 !Se llama al archivo que contiene todos los parametros de cada dia
-      open(13,file="TUV_input.txt")
        read(13,*) outfil,o3_tc,tauaer,iyear,imonth,iday,tstart,tstop
 * ___ SECTION 2: SET GRIDS _________________________________________________
 

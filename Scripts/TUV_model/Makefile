@@ -19,7 +19,7 @@ USE_INCL = tuv.o \
            wshift.o \
 	   vpair.o vptmp.o vpo3.o \
 	   odrl.o odo3.o \
-           setaer.o setalb.o setcld.o setsnw.o \
+           setaer340.o setalb.o setcld.o setsnw.o \
            setno2.o seto2.o setso2.o \
            sphers.o  \
 	   la_srb.o \
