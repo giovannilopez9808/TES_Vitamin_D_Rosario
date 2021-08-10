@@ -53,8 +53,8 @@ plt.xlim(pd.to_datetime(parameters["date initial"]),
          pd.to_datetime(parameters["date final"]))
 plt.xlabel("Periodo 2019-2020",
            fontsize=12)
-plt.ylim(0, 100)
-plt.yticks([tick for tick in range(0, 110, 10)])
+plt.ylim(0, 80)
+plt.yticks([tick for tick in range(0, 90, 10)])
 plt.ylabel("TES (minutos)",
            fontsize=12)
 # plt.title(title)
