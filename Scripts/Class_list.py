@@ -155,6 +155,9 @@ class TUV_model:
 
 class Citys_data:
     def __init__(self, city: str):
+        """
+        Parametros para cada ciudad
+        """
         self.datasets = {"Punta Arenas": {"folder": "Punta_Arenas",
                                           "file dates": "PUNA_dates.csv",
                                           "input file": "PUNA",
@@ -171,4 +174,7 @@ class Citys_data:
         self.select_dataset_for_city()
 
     def select_dataset_for_city(self):
+        """
+        Selecciona un dataset dependiendo de la ciudad ingresada
+        """
         self.dataset = self.datasets[self.city]
