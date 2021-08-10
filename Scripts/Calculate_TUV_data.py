@@ -1,19 +1,7 @@
 from Class_list import TUV_model, Citys_data
+from functions import *
 import pandas as pd
 import os
-
-
-def read_data(path: str, file: str):
-    data = pd.read_csv("{}{}".format(path,
-                                     file))
-    data = format_data(data)
-    return data
-
-
-def format_data(data: pd.DataFrame):
-    data.index = pd.to_datetime(data["Date"])
-    data = data.drop("Date", 1)
-    return data
 
 
 def print_header_terminal(date: pd.Timestamp):
