@@ -1,4 +1,4 @@
-from Class_list import TUV_model
+from Class_list import TUV_model, Citys_data
 import pandas as pd
 import os
 
@@ -26,14 +26,20 @@ parameters = {
     "path data": "../Data/",
     "file data": "ozone_data.csv",
     # Direccion guardada en el archivo savout.f line 174
-    "path results": "../PreVitamin_D/Rosario/",
-    "AOD": 0.30,
+    "path results": "../PreVitamin_D/",
+    "City": "Rosario",
     "hour initial": 11,
     "hour final": 19,
     "max rows": 60}
 data = read_data(parameters["path data"],
                  parameters["file data"])
-for date in data.index:
+City_dataset = Citys_data(parameters["City"])
+dataset = City_dataset.dataset
+parameters["path results"] = "{}{}/".format(parameters["path results"],
+                                            dataset["folder"])
+dates = read_data(parameters["path data"],
+                  dataset["file dates"])
+for date in dates.index:
     print_header_terminal(date)
     file = open("{}{}.csv".format(parameters["path results"],
                                   date.date()),
@@ -41,9 +47,10 @@ for date in data.index:
     file.write("Hour,SZA,UVI,Vitamin D\n")
     for hour in range(parameters["hour initial"], parameters["hour final"]):
         TUV = TUV_model(parameters["path results"],
+                        dataset["input file"],
                         date,
                         data["Ozone"][date],
-                        parameters["AOD"],
+                        dataset["AOD"],
                         hour,
                         hour+1,
                         parameters["max rows"])
