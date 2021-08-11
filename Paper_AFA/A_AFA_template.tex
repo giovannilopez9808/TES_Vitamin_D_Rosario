@@ -1,3 +1,4 @@
+% !TEX TS-program = pdflatex
 % !TEX encoding = UTF-8 Unicode
 
 % This is a simple template for a LaTeX document using the "article" class.
@@ -113,19 +114,19 @@
 %%% El contenido del documento comienza a partir de acá 
 
 %título del trabajo: en el primer campo en castellano, en el segundo en inglés
-\titulo{ANÁLISIS DE TRES MÉTODOS DE DERIVACIÓN DE LA IRRADIANCIA SOLAR EFECTIVA PARA LA SÍNTESIS DE PRE-VITAMINA D\textsubscript{3} EN LA PIEL, EN LA CIUDAD DE ROSARIO, ARGENTINA}{ANALYSIS OF THREE DERIVATION METHODS OF EFFECTIVE SOLAR IRRADIANCE FOR THE SYNTHESIS OF PRE-VITAMIN D\textsubscript{3} ON THE SKIN, IN ROSARIO, ARGENTINA}
+\titulo{ANÁLISIS DE LA IRRADIANCIA SOLAR EFECTIVA PARA LA SÍNTESIS DE PRE-VITAMINA D\textsubscript{3} EN LA PIEL, EN LA CIUDAD DE ROSARIO, ARGENTINA}{ANALYSIS OF THE EFFECTIVE SOLAR IRRADIANCE FOR THE SYNTHESIS OF PRE-VITAMIN D\textsubscript{3} ON THE SKIN, IN ROSARIO, ARGENTINA}
 
 \corresponding{1}{Adriana Ipiña}
-\autor{2}{Montserrat Dávalos}
-\autor{3}{Gamaliel López-Padilla}
+\autor{2}{Gamaliel López-Padilla}
+\autor{3}{Ana Fisanotti}
+\autor{4}{Montserrat Dávalos}
 \autor{1}{Rubén D. Piacentini}
 
 %afiliaciones: se pueden combinar
-\filiacion{1}{Instituto de Física Rosario (IFIR) – Universidad Nacional Rosario – Consejo Nacional de Investigaciones Científicas y
-Técnicas, 27 de Febrero 210BIS – (S2000EKF) Rosario – Argentina.}
-\filiacion{2}{Investigadora Independiente, (64810) México}
-\filiacion{3}{Facultad de Ciencias Físico Matemáticas – Universidad Autónoma de Nuevo León, Pedro de Alba S/N - Ciudad
-Universitaria San Nicolás de los Garza (66451) – México.}
+\filiacion{1}{Instituto de Física Rosario (IFIR) – Universidad Nacional Rosario – Consejo Nacional de Investigaciones Científicas y Técnicas, 27 de Febrero 210BIS – (S2000EKF) Rosario – Argentina.}
+\filiacion{2}{Facultad de Ciencias Físico Matemáticas – Universidad Autónoma de Nuevo León, Pedro de Alba S/N - Ciudad Universitaria San Nicolás de los Garza (66451) – México.}
+\filiacion{3}{Facultad de Ciencias Médicas - Universidad Nacional Rosario - Santa Fe 3100 (S2002KKT) Rosario - Argentina}
+\filiacion{4}{Investigadora Independiente, (64810) México}
 
 \fecha{Recibido: xx/xx/xx; Aceptado: xx/xx/xx} %No modificar
 
@@ -168,7 +169,7 @@ Por otro lado, la sobreexposición solar UV también puede producir efectos noci
   Dosis=\int_{t_1}^{t_2} \int_{250nm}^{400nm} E_\lambda\cdot S_\lambda d\lambda dt = \int_{t_1}^{t_2}E_tdt \label{eq:dosis}
 \end{equation}
 donde E$_\lambda$ es la irradiancia solar espectral a nivel del suelo, S$_\lambda$ es el espectro de acción biológica de la síntesis de la pre-vitamina D\textsubscript{3} o eritémica (según sea el caso) y cuyo producto integrado en la longitud de onda representa la irradiancia efectiva, E\textsubscript{t}. Esta irradiancia de acuerdo a sus respectivos S$_\lambda$, definen las irradiancias de pre-vitamina D\textsubscript{3} (E\textsubscript{vitD}) y eritémica (E\textsubscript{er}). Integrando estas irradiancias en un intervalo de tiempo resultan las dosis en unidades de J/m\textsuperscript{2}.
-La dosis mínima para mantener niveles adecuados de vitamina D\textsubscript{3} en una exposición de cuerpo completo es de 0.34 SDD (Dosis Estándar de vitamina D, SDD por sus siglas en inglés, equivalente a 100 J/m\textsuperscript{2} de exposición). Para una exposición del 25\% del cuerpo (brazos, cuello y cara) la dosis mínima es de 136 J/m\textsuperscript{2} y la dosis mínima para generar eritema en un fototipo de piel II es de 250 J/m\textsuperscript{2}, en la clasificación de Fitzpatrick.\cite{Fitzpatrick1988,UVDoses} Ambas dosis se consideran como valores de referencia en este trabajo para determinar los tiempos de exposición solar (TES). Se presenta la estimación de la irradiancia solar efectiva para la producción de la vitamina D\textsubscript{3}, mediante tres métodos: Coeficiente de proporcionalidad,\cite{UVDoses} Ecuación de Herman\cite{Herman2010} y Modelo TUV.\cite{Madronich1987} En particular, los resultados obtenidos con el modelo TUV se utilizaron para calcular los TES correspondientes a cada efecto biológico, en la ciudad de Rosario, Argentina.
+La dosis mínima para mantener niveles adecuados de vitamina D\textsubscript{3} en una exposición de cuerpo completo es de 0.34 SDD (Dosis Estándar de vitamina D, SDD por sus siglas en inglés, equivalente a 100 J/m\textsuperscript{2} de exposición). Para una exposición del 25\% del cuerpo (brazos, cuello y cara) la dosis mínima es de 136 J/m\textsuperscript{2} y la dosis mínima para generar eritema en un fototipo de piel II es de 250 J/m\textsuperscript{2}, en la clasificación de Fitzpatrick.\cite{Fitzpatrick1988,UVDoses,Fioletov_2010} Ambas dosis se consideran como valores de referencia en este trabajo para determinar los tiempos de exposición solar (TES). Se presenta la estimación de la irradiancia solar efectiva para la producción de la vitamina D\textsubscript{3}, mediante tres métodos: Coeficiente de proporcionalidad,\cite{UVDoses} Ecuación de Herman\cite{Herman2010} y Modelo TUV.\cite{Madronich1987} En particular, los resultados obtenidos con el modelo TUV se utilizaron para calcular los TES correspondientes a cada efecto biológico, en la ciudad de Rosario, Argentina.
 
 \section{MATERIALES Y MÉTODOS}
 Los datos de la columna total de ozono (O\textsubscript{3}) utilizados en este trabajo provienen de la Colección 3, OMTD3 v8.5, en Unidades Dobson (DU), medidos por el Instrumento de Monitoreo de Ozono (OMI) para las coordenadas de la ciudad de Rosario, Argentina. A bordo del satélite AURA-NASA, OMI realiza observaciones diarias en una superficie de 13x24 Km\textsuperscript{2} en el nadir \href{(disc.gsfc.nasa.gov)}{\url{disc.gsfc.nasa.gov}}. Por otro lado, se utilizó un espectroradiómetro Optronic-OL756 y la estación meteorológica DAVIS para mediciones \emph{in situ} de E$_\lambda$ e índice UV, respectivamente. Ambos ubicados en el Instituto de Física Rosario (CONICET-UNR), en la ciudad de Rosario
@@ -214,7 +215,7 @@ Herman\cite{Herman2010} determinó las E\textsubscript{vitD} ejecutando el model
 donde el O\textsubscript{3} es la columna total de ozono, RAF es el Factor de Amplificación de Radiación y U es una función de ajuste, estos dos últimos dependientes el ángulo cenital solar $(\theta)$. Esta ecuación permite determinar la E\textsubscript{vitD} sustituyendo el valor de O\textsubscript{3} medido en el sitio en cuestión y las funciones de RAF y U de acuerdo al ángulo cenital (relacionado a la hora del día). Los coeficientes para establecer U y RAF se muestran en la Tabla \ref{table::parametros}.
 
 \section{Modelo TUV}
-El modelo Tropospheric Ultraviolet Radiation (TUV) permite obtener los valores de radiación solar nanómetro a nanómetro mediante una ecuación de transferencia radiativa que lleva a determinar E$_\lambda$ a nivel del suelo, en los rangos ultravioleta, visible e infrarrojo cercano. El modelo incorpora el perfil de aerosoles cuya profundidad óptica (AOD) es de 0.34 a 340 nm (desde 5.24 km al espacio) y un perfil de O\textsubscript{3} correspondiente a la atmósfera estándar de EE. UU. Entre los datos de entrada más relevantes se encuentran las coordenadas geográficas del lugar, altura sobre el nivel del mar, AOD a 550 nm, reflectividad del suelo, albedo de dispersión simple, coeficiente de Angstrom, fecha y hora del día. La columna total de O\textsubscript{3} ingresada tiene un valor climatológico de acuerdo a la medición diaria del instrumento OMI.
+El modelo Tropospheric Ultraviolet Radiation (TUV) permite obtener los valores de radiación solar nanómetro a nanómetro mediante una ecuación de transferencia radiativa que lleva a determinar E$_\lambda$ a nivel del suelo, en los rangos ultravioleta, visible e infrarrojo cercano. El modelo incorpora el perfil de aerosoles cuya profundidad óptica (AOD) es de 0.34 a 340 nm (desde 5.24 km al espacio) y un perfil de O\textsubscript{3} correspondiente a la atmósfera estándar de EE. UU. Entre los datos de entrada más relevantes se encuentran las coordenadas geográficas del lugar, altura sobre el nivel del mar, AOD a 550 nm, reflectividad del suelo, albedo de dispersión simple, coeficiente de Angstrom, fecha y hora del día. La columna total de O\textsubscript{3} ingresada tiene un valor climatológico de acuerdo a la medición diaria del instrumento OMI. Cabe destacar que esta medición satelital subestima el perfil de O\textsubscript{3} en ciudades muy contaminadas (e.g. Santiago de Chile) por lo que diferencias con los valores de irradiancia obtenidos con los instrumentos terrestres pudieran deberse a este hecho.
 
 Con el modelo TUV también se calcularon los valores de E\textsubscript{vitD} y E\textsubscript{er} para la latitud, longitud y altura sobre el nivel del mar (32.95°S, 60.62°W, 25 m s.n.m) de la ciudad de Rosario, Argentina. Las estimaciones se realizaron cada día, minuto a minuto entre las 11:00 - 15:00 h, en el periodo junio 2019 - mayo 2020. Posteriormente se seleccionaron las irradiancias al mediodía solar.
 
