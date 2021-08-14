@@ -5,7 +5,9 @@ import datetime
 
 
 def obtain_solar_noon_hour(data: list):
-    return np.where(data == np.max(data))[0][0]
+    maximum_solar = np.where(data == np.max(data))[0]
+    size = len(maximum_solar)
+    return maximum_solar[size//2]
 
 
 def obtain_doses(hour: list, data: list, lim: float, n: int):
@@ -32,7 +34,7 @@ def obtain_doses(hour: list, data: list, lim: float, n: int):
 
 
 parameters = {"path data": "../PreVitamin_D/",
-              "city": "Rosario",
+              "city": "Santiago",
               "path results": "../Data/",
               "file results": "Doses_time",
               "Vitamin Doses": 136,
