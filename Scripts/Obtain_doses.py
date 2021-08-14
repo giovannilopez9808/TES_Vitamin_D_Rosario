@@ -52,7 +52,6 @@ file_result = open("{}{}".format(parameters["path results"],
                                  parameters["file results"]),
                    "w")
 file_result.write("Date,vitamin,1/4 MED,1 MED\n")
-hours_initial = []
 for file in files:
     date = file.replace(".csv", "")
     hour, uv_list, vitamin_list = np.loadtxt("{}{}".format(parameters["path data"],
@@ -62,7 +61,6 @@ for file in files:
                                              usecols=[0, 2, 3],
                                              unpack=True)
     hour_initial = obtain_solar_noon_hour(uv_list)
-    hours_initial.append(hour[hour_initial])
     time_vitamin = obtain_doses(hour,
                                 vitamin_list,
                                 parameters["Vitamin Doses"],
