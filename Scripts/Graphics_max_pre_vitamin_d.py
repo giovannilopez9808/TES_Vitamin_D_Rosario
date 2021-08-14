@@ -44,8 +44,8 @@ plt.ylabel("Irradiancia pre-vitamina D$_3$ (W/m$^2$)",
            fontsize=12)
 plt.xlabel("Periodo 2019-2020",
            fontsize=12)
-plt.ylim(0, 1)
-plt.yticks([tick/10 for tick in range(0, 11, 1)],
+plt.ylim(0, 0.8)
+plt.yticks([tick/10 for tick in range(0, 9, 1)],
            fontsize=12)
 plt.grid(ls="--",
          color="grey",
