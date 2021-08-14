@@ -18,7 +18,6 @@ def obtain_doses(hour: list, data: list, lim: float, n: int):
     var = True
     dosis = 0
     hour_initial = hour[n]
-    lim = lim/2
     while var and n < maximum:
         dosis += data[n]*60
         if dosis > lim:
@@ -27,14 +26,13 @@ def obtain_doses(hour: list, data: list, lim: float, n: int):
             n += 1
     if n != maximum:
         time = int((hour[n]-hour_initial)*60)+1
-        time = time*2
     else:
         time = ""
     return time
 
 
 parameters = {"path data": "../PreVitamin_D/",
-              "city": "Santiago",
+              "city": "Rosario",
               "path results": "../Data/",
               "file results": "Doses_time",
               "Vitamin Doses": 136,
